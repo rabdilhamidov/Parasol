@@ -1,0 +1,5 @@
+/wp-content/themes/node_modules/
+/wp-content/themes/src/
+/wp-content/themes/.jshintrc
+/wp-content/themes/gulpfile.js
+/wp-content/themes/package.json
