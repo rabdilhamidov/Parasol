@@ -33,9 +33,27 @@ function land_handler() {
     $(rules_popup).find('.triangle').css({ 'margin-left': 340 });
     $(rules_popup).css({ 'margin-left': -300 });
     $(rules_popup).show(300);
+    baron({
+      root: '.wrapper_1',
+      scroller: '.scroller',
+      bar: '.scroller__bar',
+      barOnCls: 'baron'
+    });
   }).on('click', '.rules-popup .control .x-close', function (event) {
     event.preventDefault();
     $(this).parent().parent().hide(300);
+  }).on('click', 'input#rules', function (event) {
+    $(rules_ch).prop({ 'checked': true });
+    $(this).before($(rules_popup));
+    $(rules_popup).find('.triangle').css({ 'margin-left': 205 });
+    $(rules_popup).css({ 'margin-left': 50 });
+    $(rules_popup).show(300);
+    baron({
+      root: '.wrapper_1',
+      scroller: '.scroller',
+      bar: '.scroller__bar',
+      barOnCls: 'baron'
+    });
   }).on('click', '.button#callback', function (event) {
     event.preventDefault();
     $(this).before($(callback_popup));
@@ -46,12 +64,6 @@ function land_handler() {
   }).on('click', 'a.top-arr', function (event) {
     event.preventDefault();
     $('html, body').animate({ scrollTop: 0 }, 1000);
-  }).on('click', 'input#rules', function (event) {
-    $(rules_ch).prop({ 'checked': true });
-    $(this).before($(rules_popup));
-    $(rules_popup).find('.triangle').css({ 'margin-left': 205 });
-    $(rules_popup).css({ 'margin-left': 50 });
-    $(rules_popup).show(300);
   });
 }
 // --

@@ -24,6 +24,7 @@
     <script type="text/javascript" src="<?php bloginfo('template_url');?>/vendor/jquery.min.js"></script>
     <script src="<?php bloginfo('template_url');?>/vendor/jquery.color.min.js"></script>      
     <script src="<?php bloginfo('template_url');?>/vendor/jquery.bxslider.min.js"></script>
+    <script src="<?php bloginfo('template_url');?>/vendor/baron.min.js"></script>    
     <script type="text/javascript" src="<?php bloginfo('template_url');?>/js/main_ra.js"></script>
 </head>
 
@@ -236,14 +237,24 @@
           </div> 
           <ul class="buttons">
             <li>
-
               <a href="#" id="callback" class="button red">Обратная связь</a>
             </li>
             <li>  
               <div class="rules-popup box-shadow">
-                <div class="text-container">
-                  <?php readfile ( get_bloginfo('template_url')."/rules.html"); ?>
+
+
+                <div class="text-container wrapper_1">
+                    <div class="scroller">
+                        <div class="container">
+                          <?php readfile ( get_bloginfo('template_url')."/rules.html"); ?>
+                        </div>
+                    </div>
+                    <div class="scroller__bar-wrapper">
+                        <div class="scroller__bar"></div>
+                    </div>
                 </div>
+
+
                 <div class="overtext"></div>
                 <div class="control">
                   <a href="#" class="x-close"></a>

@@ -361,8 +361,8 @@ section.type-2 {
           section.type-2 table td div.photo img {
             width: 100%; }
         section.type-2 table td div.text {
-          padding: 20px 10px;
-          width: 240px; }
+          padding: 20px 5px;
+          width: 220px; }
           section.type-2 table td div.text h3 {
             font-family: 'avantgardegothiccbold';
             font-size: 18px;
@@ -476,19 +476,13 @@ section#contacts {
   margin-left: -300px;
   text-align: left;
   z-index: 2; }
-  .rules-popup .overtext {
-    width: 870px;
-    overflow: auto;
-    height: 400px;
-    position: absolute;
-    background-color: #ccc;
-    margin-top: -400px;
-    background: rgba(255, 255, 255, 0.1); }
   .rules-popup .text-container {
+    position: relative;
+    overflow: hidden;
     display: inline-block;
+    vertical-align: top;
     text-align: left;
     width: 890px;
-    overflow: auto;
     height: 397px;
     padding-right: 20px;
     font-size: 14px; }
@@ -517,6 +511,48 @@ section#contacts {
         .rules-popup .text-container ul li span {
           color: #000;
           font-family: 'avantgardegothiccbold'; }
+  .rules-popup .scroller {
+    overflow-y: scroll;
+    width: 890px;
+    height: 100%;
+    border: 0;
+    padding-right: 20px;
+    -webkit-overflow-scrolling: touch;
+    /* uncomment to accelerate scrolling on iOs */ }
+  .rules-popup .scroller::-webkit-scrollbar {
+    /* Preventing webkit bug of horizontal scrolling */
+    width: 0; }
+  .rules-popup .scroller__bar-wrapper {
+    position: absolute;
+    z-index: 3;
+    top: 10px;
+    bottom: 10px;
+    right: 5px;
+    width: 4px;
+    border-radius: 5px;
+    background: #a9a9a9;
+    pointer-events: none; }
+  .rules-popup .scroller__bar {
+    /* The bar. You should define width, right and background */
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    background: #f10134;
+    width: 4px;
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+    pointer-events: auto;
+    cursor: pointer; }
+  .rules-popup .scroller__bar:hover {
+    opacity: 0.8; }
+  .rules-popup .overtext {
+    width: 900px;
+    overflow: auto;
+    height: 400px;
+    position: absolute;
+    background-color: #ccc;
+    margin-top: -400px;
+    background: rgba(255, 255, 255, 0.1); }
   .rules-popup .control {
     display: inline-block;
     width: 20px;
