@@ -1,0 +1,601 @@
+# Copyright (C) 2013 the WordPress team
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Twenty Fourteen 1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/twentyfourteen\n"
+"POT-Creation-Date: 2014-08-24 23:17+0200\n"
+"PO-Revision-Date: 2014-08-24 23:18+0200\n"
+"Last-Translator: Abdilhamidov Ruslan <rus-abd@ukr.net>\n"
+"Language-Team: ru.wordpress.org <sergeybiryukov.ru@gmail.com>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.8\n"
+"Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n%10==1 && n%100!=11) ? 3 : "
+"((n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20)) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_c;__ngettext:1,2\n"
+"X-Poedit-Basepath: E:\\WebServers\\home\\kulynad.local\\www\\wp-content"
+"\\themes\\kulynad\n"
+"X-Poedit-SearchPath-0: E:\\WebServers\\home\\kulynad.local\\www\\wp-content"
+"\\themes\\kulynad\n"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/404.php:16
+msgid "Not Found"
+msgstr "Не найдено"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/404.php:21
+#, fuzzy
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "Неприятная новость"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/404.php:22
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"По данному адресу ничего не найдено. Попробуйте воспользоваться поиском."
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/archive.php:29
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Архив за день: %s"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/archive.php:31
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Архив за месяц: %s"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/archive.php:33
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Архив за год: %s"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/archive.php:35
+msgid "Archives"
+msgstr "Архивы"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/author-bio.php:26
+#, fuzzy, php-format
+msgid "About %s"
+msgstr "Об авторе %s"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/author-bio.php:30
+#, fuzzy, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Посмотреть все записи автора %s <span class=\"meta-nav\">&rarr;</span>"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/author.php:31
+#, php-format
+msgid "All posts by %s"
+msgstr "Все записи автора %s"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/category.php:19
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Архив рубрики: %s"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/comments.php:45
+msgid "Comment navigation"
+msgstr "Навигация по комментариям"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/comments.php:46
+msgid "&larr; Older Comments"
+msgstr "&larr; Предыдущие комментарии"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/comments.php:47
+msgid "Newer Comments &rarr;"
+msgstr "Следующие комментарии &rarr;"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/comments.php:52
+msgid "Comments are closed."
+msgstr "Комментарии запрещены."
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-aside.php:13
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-audio.php:24
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-gallery.php:24
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-image.php:23
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-link.php:24
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-quote.php:13
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-status.php:13
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-video.php:23
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content.php:41
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Читать далее <span class=\"meta-nav\">&rarr;</span>"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-aside.php:14
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-audio.php:25
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-chat.php:24
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-gallery.php:25
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-image.php:24
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-link.php:25
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-quote.php:14
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-status.php:14
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-video.php:24
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content.php:42
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/image.php:70
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/page.php:35
+msgid "Pages:"
+msgstr "Страницы:"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-aside.php:20
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-aside.php:28
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-audio.php:31
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-chat.php:29
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-gallery.php:39
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-image.php:35
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-link.php:19
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-quote.php:25
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-status.php:19
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-video.php:35
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content.php:31
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/image.php:44
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/page.php:39
+msgid "Edit"
+msgstr "Изменить"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-gallery.php:36
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-image.php:32
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-quote.php:22
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-video.php:32
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content.php:49
+msgid "Leave a comment"
+msgstr "Добавить комментарий"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-gallery.php:36
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-image.php:32
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-quote.php:22
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-video.php:32
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content.php:49
+#, fuzzy
+msgid "One comment so far"
+msgstr "1 комментарий"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-gallery.php:36
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-image.php:32
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-quote.php:22
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-video.php:32
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content.php:49
+#, fuzzy, php-format
+msgid "View all % comments"
+msgstr "Комментарии (%)"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-none.php:12
+msgid "Nothing Found"
+msgstr "Не найдено"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-none.php:18
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Готовы опубликовать свою первую запись? <a href=\"%1$s\">Начните отсюда</a>."
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-none.php:22
+#, fuzzy
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with "
+"different keywords."
+msgstr ""
+"Извините, по вашему запросу ничего не найдено. Попробуйте другие ключевые "
+"слова."
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/content-none.php:27
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Запрошенную информацию найти не удалось. Возможно, будет полезен поиск по "
+"сайту."
+
+#: E:/WEBSER~2/home/KULYNA~1.LOC/www/WP-CON~1/themes/kulynad/FUNCTI~2.PHP:99
+#, fuzzy
+msgid "Navigation Menu"
+msgstr "Меню навигации"
+
+#: E:/WEBSER~2/home/KULYNA~1.LOC/www/WP-CON~1/themes/kulynad/FUNCTI~2.PHP:223
+#, php-format
+msgid "Page %s"
+msgstr "Страница %s"
+
+#: E:/WEBSER~2/home/KULYNA~1.LOC/www/WP-CON~1/themes/kulynad/FUNCTI~2.PHP:236
+#, fuzzy
+msgid "Main Widget Area"
+msgstr "Основная область"
+
+#: E:/WEBSER~2/home/KULYNA~1.LOC/www/WP-CON~1/themes/kulynad/FUNCTI~2.PHP:238
+msgid "Appears in the footer section of the site."
+msgstr "Отображается в нижней части сайта."
+
+#: E:/WEBSER~2/home/KULYNA~1.LOC/www/WP-CON~1/themes/kulynad/FUNCTI~2.PHP:246
+#, fuzzy
+msgid "Secondary Widget Area"
+msgstr "Дополнительная область"
+
+#: E:/WEBSER~2/home/KULYNA~1.LOC/www/WP-CON~1/themes/kulynad/FUNCTI~2.PHP:248
+#, fuzzy
+msgid "Appears on posts and pages in the sidebar."
+msgstr "Отображается в боковой колонке в записях и на страницах."
+
+#: E:/WEBSER~2/home/KULYNA~1.LOC/www/WP-CON~1/themes/kulynad/FUNCTI~2.PHP:271
+msgid "Posts navigation"
+msgstr "Навигация по записям"
+
+#: E:/WEBSER~2/home/KULYNA~1.LOC/www/WP-CON~1/themes/kulynad/FUNCTI~2.PHP:275
+#, fuzzy
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Предыдущие записи"
+
+#: E:/WEBSER~2/home/KULYNA~1.LOC/www/WP-CON~1/themes/kulynad/FUNCTI~2.PHP:279
+#, fuzzy
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Следующие записи <span class=\"meta-nav\">&rarr;</span>"
+
+#: E:/WEBSER~2/home/KULYNA~1.LOC/www/WP-CON~1/themes/kulynad/FUNCTI~2.PHP:305
+msgid "Post navigation"
+msgstr "Навигация по записям"
+
+#: E:/WEBSER~2/home/KULYNA~1.LOC/www/WP-CON~1/themes/kulynad/FUNCTI~2.PHP:327
+msgid "Sticky"
+msgstr "Прилеплена"
+
+#: E:/WEBSER~2/home/KULYNA~1.LOC/www/WP-CON~1/themes/kulynad/FUNCTI~2.PHP:333
+#: E:/WEBSER~2/home/KULYNA~1.LOC/www/WP-CON~1/themes/kulynad/FUNCTI~2.PHP:339
+#, fuzzy
+msgid ", "
+msgstr ", "
+
+#: E:/WEBSER~2/home/KULYNA~1.LOC/www/WP-CON~1/themes/kulynad/FUNCTI~2.PHP:348
+#, fuzzy, php-format
+msgid "View all posts by %s"
+msgstr "Просмотреть все записи в рубрике &laquo;%s&raquo;"
+
+#: E:/WEBSER~2/home/KULYNA~1.LOC/www/WP-CON~1/themes/kulynad/FUNCTI~2.PHP:374
+#, fuzzy, php-format
+msgid "Permalink to %s"
+msgstr "Постоянная ссылка: %s"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/header.php:41
+#, fuzzy
+msgid "Menu"
+msgstr "Меню"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/header.php:42
+msgid "Skip to content"
+msgstr "Перейти к содержимому"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/home.php:147
+msgid "Materials"
+msgstr "Материалы"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/home.php:148
+#, fuzzy, php-format
+msgid "RAbout %s"
+msgstr "Автор: %s"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/home.php:155
+#, fuzzy
+msgid "Properties"
+msgstr "Свойства таблицы"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/image.php:22
+#, fuzzy, php-format
+msgid ""
+"<span class=\"attachment-meta\">Published on <time class=\"entry-date\" "
+"datetime=\"%1$s\">%2$s</time> in <a href=\"%3$s\" title=\"Return to %4$s\" "
+"rel=\"gallery\">%5$s</a></span>"
+msgstr ""
+"<span class=\"attachment-meta\">Опубликовано <time class=\"entry-date\" "
+"datetime=\"%1$s\">%2$s</time> в галерее <a href=\"%3$s\" title=\"Вернуться: "
+"%4$s\" rel=\"gallery\">%5$s</a></span>"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/image.php:39
+#, fuzzy
+msgid "Full resolution"
+msgstr "Полный размер"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/image.php:51
+#, fuzzy
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr "<span class=\"meta-nav\">&larr;</span> Предыдущее"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/image.php:52
+#, fuzzy
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Следующее <span class=\"meta-nav\">&rarr;</span>"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/inc/back-compat.php:37
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/inc/back-compat.php:47
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/inc/back-compat.php:60
+#, fuzzy, php-format
+msgid ""
+"Twenty Thirteen requires at least WordPress version 3.6. You are running "
+"version %s. Please upgrade and try again."
+msgstr ""
+"Тема Twenty Thirteen требует WordPress 3.6 или выше. У вас версия %s. "
+"Пожалуйста, обновите WordPress и попробуйте ещё раз."
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/search.php:18
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Результаты поиска: %s"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/tag.php:21
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Архив метки: %s"
+
+#: E:\WebServers\home\kulynad.local\www\wp-content\themes\kulynad/taxonomy-post_format.php:23
+#, fuzzy, php-format
+msgid "%s Archives"
+msgstr "Архив формата &laquo;%s&raquo;"
+
+#~ msgid ""
+#~ "The home page features your choice of up to 6 posts prominently displayed "
+#~ "in a grid or slider, controlled by a <a href=\"%1$s\">tag</a>; you can "
+#~ "change the tag and layout in <a href=\"%2$s\">Appearance &rarr; "
+#~ "Customize</a>. If no posts match the tag, <a href=\"%3$s\">sticky posts</"
+#~ "a> will be displayed instead."
+#~ msgstr ""
+#~ "На главной странице можно отобразить до 6 записей в виде сетки или "
+#~ "слайдера, отмеченных <a href=\"%1$s\">меткой</a>. Переименовать метку и "
+#~ "выбрать вариант отображения можно на экране <a href=\"%2$s\">«Внешний "
+#~ "вид» &rarr; «Настроить»</a>. Если записей с меткой не найдено, будут "
+#~ "отображаться <a href=\"%3$s\">прилепленные записи</a>."
+
+#~ msgid "More videos"
+#~ msgstr "Другие видео"
+
+#~ msgid "More audio"
+#~ msgstr "Другие аудио"
+
+#~ msgid "More quotes"
+#~ msgstr "Другие цитаты"
+
+#~ msgid "More links"
+#~ msgstr "Другие ссылки"
+
+#~ msgid "More galleries"
+#~ msgstr "Другие галереи"
+
+#~ msgid "More asides"
+#~ msgstr "Другие заметки"
+
+#~ msgctxt "featured content default tag slug"
+#~ msgid "featured"
+#~ msgstr "featured"
+
+#~ msgid ""
+#~ "Use this widget to list your recent Aside, Quote, Video, Audio, Image, "
+#~ "Gallery, and Link posts."
+#~ msgstr ""
+#~ "Используйте этот виджет для отображения ваших свежих заметок, цитат, "
+#~ "видео- и аудиозаписей, изображений, галерей и ссылок."
+
+#~ msgid "http://wordpress.org/themes/twentyfourteen"
+#~ msgstr "http://wordpress.org/themes/twentyfourteen"
+
+#~ msgid ""
+#~ "Use a <a href=\"%1$s\">tag</a> to feature your posts. If no posts match "
+#~ "the tag, <a href=\"%2$s\">sticky posts</a> will be displayed instead."
+#~ msgstr ""
+#~ "Используйте <a href=\"%1$s\">метку</a>, чтобы пометить записи как "
+#~ "избранные. Если ни одной записи с меткой не найдено, будут отображаться "
+#~ "<a href=\"%2$s\">прилепленные записи</a>."
+
+#~ msgid "Display Site Title &amp; Tagline"
+#~ msgstr "Отображать название и описание"
+
+#~ msgid ""
+#~ "For an in-depth tutorial, and more tips and tricks, visit the <a href=\"%s"
+#~ "\">Twenty Fourteen documentation</a>."
+#~ msgstr ""
+#~ "Подробные инструкции и дополнительную информацию можно найти в <a href="
+#~ "\"%s\">документации Twenty Fourteen</a>."
+
+#~ msgctxt "monthly archives date format"
+#~ msgid "F Y"
+#~ msgstr "F Y"
+
+#~ msgctxt "yearly archives date format"
+#~ msgid "Y"
+#~ msgstr "Y"
+
+#~ msgid "Site Title Color"
+#~ msgstr "Цвет названия сайта"
+
+#~ msgid "Tag Name"
+#~ msgstr "Название метки"
+
+#~ msgid "Don&rsquo;t display tag on front end."
+#~ msgstr "Не отображать метку на сайте."
+
+#~ msgid ""
+#~ "In 2014, our default theme lets you create a responsive magazine website "
+#~ "with a sleek, modern design. Feature your favorite homepage content in "
+#~ "either a grid or a slider. Use the three widget areas to customize your "
+#~ "website, and change your content's layout with a full-width page template "
+#~ "and a contributor page to show off your authors. Creating a magazine "
+#~ "website with WordPress has never been easier."
+#~ msgstr ""
+#~ "В 2014 году наша тема по умолчанию позволит вам создать адаптивный "
+#~ "журнальный сайт с современным дизайном. Отобразите на главной свои "
+#~ "любимые записи в виде сетки или слайдера. Используйте три области для "
+#~ "виджетов, чтобы настроить свой сайт. Попробуйте также изменить "
+#~ "представление содержимого с помощью шаблона страницы на всю ширину и "
+#~ "создайте страницу участников, чтобы показать авторов сайта. Создать "
+#~ "журнальный сайт на WordPress стало проще, чем когда-либо."
+
+#~ msgid "Previous"
+#~ msgstr "Назад"
+
+#~ msgid "Next"
+#~ msgstr "Далее"
+
+#~ msgid "Additional sidebar that appears on the right."
+#~ msgstr "Дополнительная боковая колонка справа."
+
+#~ msgid "%d Article"
+#~ msgid_plural "%d Articles"
+#~ msgstr[0] "%d статья"
+#~ msgstr[1] "%d статьи"
+#~ msgstr[2] "%d статей"
+#~ msgstr[3] "%d статья"
+
+#~ msgid "Previous Image"
+#~ msgstr "Предыдущее изображение"
+
+#~ msgid "Next Image"
+#~ msgstr "Следующее изображение"
+
+#~ msgid "Background may only be visible on wide screens."
+#~ msgstr "Фон может отображаться только на широком экране."
+
+#~ msgid "Featured Content"
+#~ msgstr "Избранное содержимое"
+
+#~ msgid "Layout"
+#~ msgstr "Разметка"
+
+#~ msgid "Grid"
+#~ msgstr "Сетка"
+
+#~ msgid "Slider"
+#~ msgstr "Слайдер"
+
+#~ msgid ""
+#~ "Enhance your site design by using <a href=\"%s\">Featured Images</a> for "
+#~ "posts you&rsquo;d like to stand out (also known as post thumbnails). This "
+#~ "allows you to associate an image with your post without inserting it. "
+#~ "Twenty Fourteen uses featured images for posts and pages&mdash;above the "
+#~ "title&mdash;and in the Featured Content area on the home page."
+#~ msgstr ""
+#~ "Улучшите дизайн вашего сайта с помощью <a href=\"%s\">миниатюр записей</"
+#~ "a>. Эта функция позволяет связать изображение с записью, не вставляя его. "
+#~ "Тема Twenty Fourteen использует миниатюры для записей и страниц (над "
+#~ "заголовком), а также в разделе &laquo;Избранное содержимое&raquo; на "
+#~ "главной."
+
+#~ msgid "<span class=\"meta-nav\">Published In</span>%title"
+#~ msgstr "<span class=\"meta-nav\">Опубликовано в</span>%title"
+
+#~ msgid "<span class=\"meta-nav\">Previous Post</span>%title"
+#~ msgstr "<span class=\"meta-nav\">Предыдущая запись</span>%title"
+
+#~ msgid "<span class=\"meta-nav\">Next Post</span>%title"
+#~ msgstr "<span class=\"meta-nav\">Следующая запись</span>%title"
+
+#~ msgid "Twenty Fourteen Ephemera"
+#~ msgstr "Мимолётное (Twenty Fourteen)"
+
+#~ msgid "Audio"
+#~ msgstr "Аудио"
+
+#~ msgid ""
+#~ "This gallery contains <a href=\"%1$s\" rel=\"bookmark\">%2$s photo</a>."
+#~ msgid_plural ""
+#~ "This gallery contains <a href=\"%1$s\" rel=\"bookmark\">%2$s photos</a>."
+#~ msgstr[0] ""
+#~ "Эта галерея содержит <a href=\"%1$s\" rel=\"bookmark\">%2$s фотографию</"
+#~ "a>."
+#~ msgstr[1] ""
+#~ "Эта галерея содержит <a href=\"%1$s\" rel=\"bookmark\">%2$s фотографии</"
+#~ "a>."
+#~ msgstr[2] ""
+#~ "Эта галерея содержит <a href=\"%1$s\" rel=\"bookmark\">%2$s фотографий</"
+#~ "a>."
+#~ msgstr[3] ""
+#~ "Эта галерея содержит <a href=\"%1$s\" rel=\"bookmark\">%2$s фотографию</"
+#~ "a>."
+
+#~ msgid "Title:"
+#~ msgstr "Заголовок:"
+
+#~ msgid "Number of posts to show:"
+#~ msgstr "Количество записей:"
+
+#~ msgid "Post format to show:"
+#~ msgstr "Формат записей:"
+
+#~ msgid "Contributor Page"
+#~ msgstr "Страница участников"
+
+#~ msgid "One thought on &ldquo;%2$s&rdquo;"
+#~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "%2$s: Один комментарий"
+#~ msgstr[1] "%2$s: %1$s комментария"
+#~ msgstr[2] "%2$s: %1$s комментариев"
+#~ msgstr[3] "%2$s: %1$s комментарий"
+
+#~ msgid "1 Comment"
+#~ msgstr "1 комментарий"
+
+#~ msgid "% Comments"
+#~ msgstr "Комментарии (%)"
+
+#~ msgid "http://wordpress.org/"
+#~ msgstr "http://wordpress.org/"
+
+#~ msgid "Proudly powered by %s"
+#~ msgstr "Сайт работает на %s"
+
+#~ msgid "Top primary menu"
+#~ msgstr "Основное верхнее меню"
+
+#~ msgid "Secondary menu in left sidebar"
+#~ msgstr "Дополнительное меню слева"
+
+#~ msgid "Primary Sidebar"
+#~ msgstr "Основная колонка"
+
+#~ msgid "Main sidebar that appears on the left."
+#~ msgstr "Основная боковая колонка слева."
+
+#~ msgid "Content Sidebar"
+#~ msgstr "Колонка содержимого"
+
+#~ msgctxt "Lato font: on or off"
+#~ msgid "on"
+#~ msgstr "on"
+
+#~ msgid "Search"
+#~ msgstr "Поиск"
+
+#~ msgid "Primary Menu"
+#~ msgstr "Основное меню"
+
+#~ msgid "&larr; Previous"
+#~ msgstr "&larr; Назад"
+
+#~ msgid "Next &rarr;"
+#~ msgstr "Далее &rarr;"
+
+#~ msgid "Videos"
+#~ msgstr "Видео"
+
+#~ msgid "Images"
+#~ msgstr "Изображения"
+
+#~ msgid "More images"
+#~ msgstr "Другие изображения"
+
+#~ msgid "Galleries"
+#~ msgstr "Галереи"
+
+#~ msgid "Asides"
+#~ msgstr "Заметки"
+
+#~ msgid "Links"
+#~ msgstr "Ссылки"
+
+#~ msgid "Quotes"
+#~ msgstr "Цитаты"
+
+#~ msgid "Twenty Fourteen"
+#~ msgstr "Twenty Fourteen"
+
+#~ msgid "the WordPress team"
+#~ msgstr "Команда WordPress"
+
+#~ msgid "Full Width Page"
+#~ msgstr "Страница на всю ширину"
