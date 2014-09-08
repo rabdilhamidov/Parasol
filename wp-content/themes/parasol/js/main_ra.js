@@ -2,7 +2,7 @@ function land_handler() {
   // Инициализация переменных
   var slogan;
   var rules_popup = $('.rules-popup');
-  var callback_popup = $('.callback-popup');
+  var order_form_popup = $('.popup-order-form');
   var rules_ch = $('input#rules');
   $(rules_ch).prop({ 'checked': false });
   // Слайдер
@@ -22,6 +22,32 @@ function land_handler() {
     });
   // кружочки-вопросы
   circles();
+  // дроп-даун
+  var dropDown = function (event) {
+    event.preventDefault();
+    var $obj = $(this);
+    var $parentObj = $obj.closest('.drop-down');
+    var overlay;
+    var list;
+    var closeDrobdown = function () {
+      if (this.nodeName === 'LI' && $(this).closest('.drop-down').length === 1) {
+        $parentObj.find('input[type=text]').val($(this).text());
+        $parentObj.find('input[type=hidden]').val($(this).attr('data'));
+      }
+      $parentObj.removeClass('open');
+      $('body').off('click', '*', closeDrobdown);
+      return false;
+    };
+    $parentObj.addClass('open');
+    $('body').on('click', '*', closeDrobdown);
+  };
+  // форма заказа
+  var order_form = function (event) {
+    event.preventDefault();
+    $(order_form_popup).fadeIn(300);
+  };
+  /*
+  */
   $(document).ready(function () {
   }).on('click', '#slider .controls a', function (event) {
     event.preventDefault();
@@ -54,14 +80,10 @@ function land_handler() {
       bar: '.scroller__bar',
       barOnCls: 'baron'
     });
-  }).on('click', '.button#callback', function (event) {
+  }).on('click', 'a#buy-card', order_form).on('click', '.popup-order-form .control .x-close', function (event) {
     event.preventDefault();
-    $(this).before($(callback_popup));
-    $(callback_popup).show(300);
-  }).on('click', '.callback-popup .control .x-close', function (event) {
-    event.preventDefault();
-    $(this).parent().parent().hide(300);
-  }).on('click', 'a.top-arr', function (event) {
+    $(order_form_popup).fadeOut(300);
+  }).on('click', 'div.drop-down', dropDown).on('click', 'a.top-arr', function (event) {
     event.preventDefault();
     $('html, body').animate({ scrollTop: 0 }, 1000);
   });

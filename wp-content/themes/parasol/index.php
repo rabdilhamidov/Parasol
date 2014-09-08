@@ -241,8 +241,6 @@
             </li>
             <li>  
               <div class="rules-popup box-shadow">
-
-
                 <div class="text-container wrapper_1">
                     <div class="scroller">
                         <div class="container">
@@ -253,8 +251,6 @@
                         <div class="scroller__bar"></div>
                     </div>
                 </div>
-
-
                 <div class="overtext"></div>
                 <div class="control">
                   <a href="#" class="x-close"></a>

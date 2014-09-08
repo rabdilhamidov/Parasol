@@ -40,7 +40,7 @@
           <a href="#" id="where-buy" class="menu-item">Где купить <br><span>044·290·911·1</span></a>
           <a href="#" id="all-ukraine" class="menu-item">Вся&nbsp;Украина</a>
           <a href="#" id="how-works" class="menu-item">Работаем&nbsp;24/7</a>
-          <a href="#" id="callback" class="menu-item red-button">Купить</a>
+          <a href="#" id="buy-card" class="menu-item red-button">Купить</a>
         </nav>
       </div>
     </header><!-- #masthead -->
@@ -321,10 +321,6 @@
           <a href ="#" class="top-arr"></a>
         </div>
       </section>
-      
-
-
-
 
       <footer class="site-footer">
         <p class="copyright">© PARASOL Social Project. 2014</p>
@@ -334,49 +330,118 @@
     <!-- <div class="push"></div> -->
   </div><!-- #page -->
 
+  <div class="popup-order-form">
+    <div class="head-block">
+      <div class="steps">
+        <a href="#step-1" class="steps step-1 active">Шаг 1</a>
+        <a href="#step-2" class="steps step-2">Шаг 2</a>
+        <a href="#step-3" class="steps step-3">Шаг 3</a>
+      </div>
+      <div class="control">
+        <a href="#" class="x-close"></a>
+      </div> 
+      <div class="form-content" id="step-1">
+        <h3>Выберите способ доставки</h3>
+        <div class="delivery">
+          <input name="delivery" id="nova-poshta" type="radio" value="nova-poshta">
+          <label for="nova-poshta">Доставка по Украине</label>
+          <p>
+            <img src="images/nova-poshta.png">
+            Оплата доставки согласно тарифам Новой Почты на момент получения
+          </p>        
+        </div>
+        <div class="delivery">
+          <input name="delivery" id="carrier" type="radio" value="carrier">
+          <label for="carrier">Доставка курьером по&nbsp;Киеву</label>
+          <p>
+            Оплата наличными на момент получения. <br>
+            Стоимость доставки:<br>
+            <strong>35</strong> грн - при заказе 1-ой карты<br>
+            <strong>15-20</strong> грн - при оптовом заказе (свыше 10 карт)
+          </p>      
+        </div>        
+      </div>
+      <div class="control">
+        <a href="#step-2" id="to-step-2" class="button red">Далее</a>
+      </div>
 
+      <div class="form-content" id="step-2">
+        <h3>Контакты и адрес доставки:</h3>
+        <ul>
+          <li>
+            <label for="name">Имя</label> 
+            <input name="name" type="text" placeholder="Имя" value="">
+          </li>
+          <li>
+            <label for="surname">Фамилия</label> 
+            <input name="surname" type="text" placeholder="Фамилия" value="">
+          </li>
+          <li>
+            <label for="email">E-Mail</label> 
+            <input name="email" type="text" placeholder="E-Mail" value="">
+          </li>
+          <li>
+            <label for="phone">Телефон</label> 
+            <input name="phone" type="text" placeholder="Телефон" value="">
+          </li>
+          <li>
+            <label for="city">Город</label> 
+            <input name="city" type="text" placeholder="Город" value="">
+          </li>
+          <li>
+            <label for="street">Улица</label> 
+            <input name="street" type="text" placeholder="Улица" value="">
+          </li>
+          <li>
+            <label for="house">Дом</label> 
+            <input name="house" type="text" placeholder="Дом" value="">
+          </li>
+          <li>
+            <label for="flat">Улица</label> 
+            <input name="flat" type="text" placeholder="Квартира" value="">
+          </li>
+        </ul>
+        <div class="req-memo">Все поля обязательны для заполнения</div>
+        <div class="control">
+          <a href="#step-3" id="to-step-3" class="button red">Далее</a>
+        </div>
+      </div>
 
-
-
-
-
-
-
-  <!-- <div class="overlay"></div> -->
-  <div class="callback-popup box-big-shadow" style="display:none;">
-    <div class="container">
-      <div class="wpcf7" id="wpcf7-f150-o1" lang="ru-RU" dir="ltr">
-        <div class="screen-reader-response"></div>
-        <form name="" action="/#wpcf7-f150-o1" method="post" class="wpcf7-form" novalidate="novalidate">
-          <div style="display: none;">
-          <input type="hidden" name="_wpcf7" value="150" />
-          <input type="hidden" name="_wpcf7_version" value="3.9.3" />
-          <input type="hidden" name="_wpcf7_locale" value="ru_RU" />
-          <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f150-o1" />
-          <input type="hidden" name="_wpnonce" value="e358b3e0e0" />
-          </div>
-          <p>Ваше имя (обязательно)<br />
-              <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span> </p>
-          <p>Ваш e-mail (обязательно)<br />
-              <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" /></span> </p>
-          <p>Тема<br />
-              <span class="wpcf7-form-control-wrap your-subject"><input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" /></span> </p>
-          <p>Сообщение<br />
-              <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span> </p>
-          <p><input type="hidden" name="_wpcf7_captcha_challenge_captcha-499" value="1382997637" /><img class="wpcf7-form-control wpcf7-captchac wpcf7-captcha-captcha-499" width="72" height="24" alt="captcha" src="http://parasol.local/wp-content/uploads/wpcf7_captcha/1382997637.png" /> </p>
-          <p><span class="wpcf7-form-control-wrap captcha-499"><input type="text" name="captcha-499" value="" size="40" class="wpcf7-form-control wpcf7-captchar" aria-invalid="false" /></span> </p>
-          <p><input type="submit" value="Отправить" class="wpcf7-form-control wpcf7-submit" /></p>
-          <div class="wpcf7-response-output wpcf7-display-none"></div>
-        </form>
+      <div class="form-content" id="step-3">
+        <ul>
+          <li>
+            <label for="quantity">Кол-во карт:</label>
+              <div class="drop-down" id="quantity">
+                <input name="quantity" type="text" placeholder="1" readonly="readonly" value="">
+                <ul>
+                  <li>1</li>
+                  <li>2</li>
+                </ul>
+              </div>             
+          </li>
+          <li>
+            <label for="payment">Оплата:</label>
+              <div class="drop-down" id="payment">
+                <input name="payment" type="text" placeholder="Онлайн (Monexy)" readonly="readonly" value="">
+                <ul>
+                  <li>Онлайн (Monexy)</li>
+                </ul>
+              </div>             
+          </li>
+        </ul>
+        <div class="delivery-memo">Доставка оплачивается отдельно от суммы заказа</div>
+        <div class="control">
+          <a href="#step-3" id="to-step-3" class="button red">Подтвердить</a>
+        </div>
       </div>
     </div>          
-    <div class="control">
-      <a href="#" class="x-close"></a>
-    </div> 
-  </div>
+  </div>  
+
+
 
   <script type="text/javascript">
   (function(){
+
     land_handler();
   }());
   </script>      
