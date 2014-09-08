@@ -1,6 +1,4 @@
 <?php 
-define(RU, 'ru_RU');
-define(EN, 'en_US');
 
 function theme_setup() {
 	// load_theme_textdomain( 'kulynad');
