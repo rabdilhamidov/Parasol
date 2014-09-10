@@ -70,6 +70,8 @@ a {
     background: #4c9ed9; }
   a:hover {
     text-decoration: underline; }
+  a:active {
+    border: 0 none; }
   a.red-button {
     padding: 8px 18px 10px;
     background-color: #f10134;
@@ -98,6 +100,8 @@ a {
     a.button.grey {
       background-color: #636160;
       border: 2px solid #737373; }
+    a.button.header {
+      width: 120px; }
   a.where-buy {
     background-position: -5px -955px;
     background-repeat: no-repeat;
@@ -150,7 +154,7 @@ a {
     position: absolute;
     width: 100%;
     z-index: 100;
-    max-height: 100px;
+    max-height: 120px;
     overflow-y: auto;
     overflow-x: hidden;
     border-radius: 3px; }
@@ -220,9 +224,9 @@ section#slider {
     section#slider .slide .img-cont {
       height: 485px;
       overflow: hidden;
-      width: 101% img;
-      width-margin-left: -200px;
-      width-height: 100%; }
+      width: 100%; }
+      section#slider .slide .img-cont img {
+        height: 100%; }
     section#slider .slide .text {
       position: absolute;
       top: 50%;
@@ -429,7 +433,7 @@ section.type-2 {
             width: 100%; }
         section.type-2 table td div.text {
           padding: 20px 5px;
-          width: 220px; }
+          width: 240px; }
           section.type-2 table td div.text h3 {
             font-family: 'avantgardegothiccbold';
             font-size: 18px;
@@ -478,7 +482,7 @@ section#questions {
       margin-bottom: 10px; }
       section#questions ul li p {
         display: inline-block;
-        width: 130px;
+        width: 135px;
         height: 130px;
         text-align: center;
         margin-top: 20px;
@@ -500,15 +504,16 @@ section#contacts {
   background: url(../images/contacts-back.jpg) left top repeat;
   padding-bottom: 20px; }
   section#contacts .phone {
-    width: 370px;
-    height: 130px;
     margin: -15px auto;
-    font-size: 58px;
+    font-size: 33px;
+    line-height: 50px;
     font-family: 'avantgardegothiccbold'; }
-    section#contacts .phone a {
+    section#contacts .phone a.where-buy {
       height: 85px;
       margin-left: 200px;
-      margin-bottom: -40px; }
+      margin-top: 30px;
+      margin-bottom: -20px;
+      cursor: default; }
   section#contacts ul.buttons {
     margin-top: 80px; }
     section#contacts ul.buttons li {
@@ -642,15 +647,15 @@ section#contacts {
   background-color: #302e2c;
   color: #737373;
   border-radius: 5px;
-  position: absolute;
+  position: fixed;
   text-align: left;
   z-index: 2;
   left: 50%;
-  width: 360px;
   margin-left: -205px;
-  top: 500px;
-  padding: 20px;
-  color: #fff; }
+  top: 40px;
+  padding: 30px;
+  color: #fff;
+  border: 1px solid #737373; }
   .popup-order-form .head-block .steps {
     display: inline-block; }
     .popup-order-form .head-block .steps a {
@@ -677,11 +682,14 @@ section#contacts {
       .popup-order-form .head-block .steps a.step-3 {
         z-index: 1; }
   .popup-order-form .form-content#step-1 {
-    display: block; }
+    display: block;
+    width: 325px; }
   .popup-order-form .form-content#step-2 {
-    display: none; }
+    display: none;
+    width: 435px; }
   .popup-order-form .form-content#step-3 {
-    display: none; }
+    display: none;
+    width: 325px; }
   .popup-order-form .form-content h3 {
     font-size: 16px;
     padding-top: 15px; }
@@ -700,26 +708,54 @@ section#contacts {
     font-size: 18px; }
   .popup-order-form .form-content input[type=radio] {
     margin-right: 5px; }
-  .popup-order-form .form-content ul li label {
-    display: block;
-    margin-top: 10px; }
-  .popup-order-form .form-content input:not([type=radio]), .popup-order-form .form-content textarea {
+  .popup-order-form .form-content ul {
+    vertical-align: top; }
+    .popup-order-form .form-content ul.col-1, .popup-order-form .form-content ul.col-2 {
+      width: 200px;
+      display: inline-block; }
+    .popup-order-form .form-content ul.col-1 {
+      margin-right: 30px; }
+    .popup-order-form .form-content ul.col-1 {
+      margin-right: 30px; }
+    .popup-order-form .form-content ul li label {
+      display: block;
+      margin-top: 10px; }
+    .popup-order-form .form-content ul li.house, .popup-order-form .form-content ul li.flat {
+      width: 85px;
+      display: inline-block;
+      margin-right: 10px; }
+  .popup-order-form .form-content input[type=radio] {
+    margin-right: 5px; }
+  .popup-order-form .form-content input:not([type=radio]) {
     width: 100%;
     border: 0 none;
     margin-top: 5px;
-    border-radius: 3px; }
+    border-radius: 3px;
+    height: 40px; }
   .popup-order-form .form-content .drop-down#quantity {
     width: 80px; }
   .popup-order-form .form-content .drop-down#payment {
     width: 100%; }
-  .popup-order-form .req-memo {
-    width: 180px;
-    display: inline-block;
+  .popup-order-form .form-content .req-memo {
+    margin-top: 40px;
+    text-align: right; }
+  .popup-order-form .form-content .summa {
+    font-size: 16px;
+    margin-top: 20px; }
+    .popup-order-form .form-content .summa strong {
+      font-family: 'avantgardegothiccbold';
+      font-weight: 500; }
+  .popup-order-form .form-content .delivery-memo {
     margin-top: 20px; }
   .popup-order-form .control {
     float: right; }
     .popup-order-form .control a.button {
       margin-top: 20px; }
+
+.err {
+  font-size: 10px;
+  color: #f10134;
+  display: none; }
 
 /**
  * 4.1 Site Header
@@ -744,7 +780,8 @@ section#contacts {
   display: inline-block;
   width: 145px;
   height: 71px;
-  text-decoration: none; }
+  text-decoration: none;
+  float: left; }
 
 .site-header .site-title:hover {
   text-decoration: none; }
@@ -759,27 +796,35 @@ section#contacts {
 nav {
   display: inline-block;
   float: right; }
-  nav a.menu-item {
+  nav li.menu-item {
     text-decoration: none;
     display: inline-block;
     color: #fff;
     vertical-align: middle;
     margin-left: 30px; }
-    nav a.menu-item#where-buy {
-      width: 230px;
-      margin-top: 18px;
-      text-align: left; }
-      nav a.menu-item#where-buy span {
-        color: #f10134;
-        font-size: 28px;
+    nav li.menu-item#where-buy {
+      font-family: 'avantgardegothiccbold';
+      font-size: 15px;
+      color: #f10134;
+      margin-right: 50px;
+      text-align: left;
+      line-height: 20px;
+      width: 250px; }
+      nav li.menu-item#where-buy p {
+        color: #fff;
+        font-size: 16px;
+        display: inline-block;
         position: absolute;
         margin-left: 50px;
-        margin-top: -32px; }
-      nav a.menu-item#where-buy:before {
+        margin-top: -38px;
+        height: 50px;
+        overflow: hidden; }
+        nav li.menu-item#where-buy p span {
+          color: #fff; }
+      nav li.menu-item#where-buy:before {
         content: ' ';
         vertical-align: top;
         margin-right: 10px;
-        margin-top: -15px;
         background-position: -5px -429px;
         background-repeat: no-repeat;
         overflow: hidden;
@@ -787,10 +832,10 @@ nav {
         width: 40px;
         height: 63px;
         background-image: url('../images/sprite.png'); }
-    nav a.menu-item#all-ukraine {
+    nav li.menu-item#all-ukraine {
       width: 100px;
       text-align: center; }
-      nav a.menu-item#all-ukraine:before {
+      nav li.menu-item#all-ukraine:before {
         content: ' ';
         background-position: -5px -372px;
         background-repeat: no-repeat;
@@ -799,10 +844,10 @@ nav {
         width: 69px;
         height: 47px;
         background-image: url('../images/sprite.png'); }
-    nav a.menu-item#how-works {
+    nav li.menu-item#how-works {
       width: 120px;
       text-align: center; }
-      nav a.menu-item#how-works:before {
+      nav li.menu-item#how-works:before {
         content: ' ';
         background-position: -5px -318px;
         background-repeat: no-repeat;

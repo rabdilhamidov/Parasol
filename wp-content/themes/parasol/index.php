@@ -26,6 +26,8 @@
     <script src="<?php bloginfo('template_url');?>/vendor/jquery.bxslider.min.js"></script>
     <script src="<?php bloginfo('template_url');?>/vendor/baron.min.js"></script>    
     <script type="text/javascript" src="<?php bloginfo('template_url');?>/js/main_ra.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_url');?>/js/order_form.js"></script>
+    <link rel="shortcut icon" href="<?php bloginfo('template_url');?>/favicon.ico">
 </head>
 
 <body>
@@ -33,14 +35,19 @@
     
     <header id="masthead" class="site-header" role="banner">
       <div class="content-block">
-        <a class="home-link" href="http://parasol.local/" title="Parasol" rel="home">
+        <a class="home-link" href="http://my-parasol.com/" title="Parasol" rel="home">
           <h1 class="site-title"></h1>
         </a>
+        <?php $post = get_post_slug('contacts'); setup_postdata($post);?>
         <nav id="site-navigation" class="navigation main-navigation" role="navigation">
-          <a href="#" id="where-buy" class="menu-item">Где купить <br><span>044·290·911·1</span></a>
-          <a href="#" id="all-ukraine" class="menu-item">Вся&nbsp;Украина</a>
-          <a href="#" id="how-works" class="menu-item">Работаем&nbsp;24/7</a>
-          <a href="#" id="callback" class="menu-item red-button">Купить</a>
+          <ul>
+            <li id="where-buy" class="menu-item">Где купить <br>
+                <?php the_content();?>
+            </li>
+            <li id="all-ukraine" class="menu-item">Вся&nbsp;Украина</li>
+            <li id="how-works" class="menu-item">Работаем&nbsp;24/7</li>
+            <li id="buy-card" class="menu-item"><a href="#" class="button red header buy-card">Купить</a></li>
+          </ul>
         </nav>
       </div>
     </header> <!-- #masthead -->
@@ -103,7 +110,7 @@
             <input id="rules" type="checkbox" name="rules" value="y">
             <label for="rules" class="checkbox">с правилами предоставления услуг ознакомлен</label>
           </p>       
-          <a href="#" id="buy-card" class="red-button">Купить</a>
+          <a href="#" id="buy-card" class="red-button buy-card">Купить</a>
         </div>
       </section>
       
@@ -232,13 +239,10 @@
       <section id="contacts" class="contacts">
         <div class="content-block">
           <div class="phone">
-            <a href="#" class="where-buy"></a>
+            <a href="javascript: void(0);" class="where-buy"></a>
             <?php echo the_content(); ?>
           </div> 
           <ul class="buttons">
-            <li>
-              <a href="#" id="callback" class="button red">Обратная связь</a>
-            </li>
             <li>  
               <div class="rules-popup box-shadow">
                 <div class="text-container wrapper_1">
@@ -260,11 +264,11 @@
               <a href="#" id="rules" class="button black">Правила<br>предоставления услуг</a>
             </li>
             <li><a href="#" id="passport911" class="button grey">Паспорт 911</a></li>
-            <li><a href="#" id="buy" class="button red">Купить</a></li>
+            <li><a href="#" id="buy" class="button red buy-card">Купить</a></li>
           </ul>
           <ul class="logos">
-            <li><a href="#"><img src="<?php bloginfo('template_url');?>/images/contacts-parasol-logo.png"></a></li>
-            <li><a href="#"><img src="<?php bloginfo('template_url');?>/images/contacts-hkc-logo.png"></a></li>
+            <li><a href="http://my-parasol.com/"><img src="<?php bloginfo('template_url');?>/images/contacts-parasol-logo.png"></a></li>
+            <li><a href="http://nks-service.com/"><img src="<?php bloginfo('template_url');?>/images/contacts-hkc-logo.png"></a></li>
           </ul>
           <a href ="#" class="top-arr"></a>
           <?php edit_post_link( __( 'Edit')); ?>
@@ -279,131 +283,135 @@
       <!-- <div class="push"></div> -->  
   </div><!-- #page -->
 
-  <!-- Contact Form 7 Popup-->
-  <?php //$post = get_post_slug('callback'); setup_postdata($post); ?>
-  <!-- <div class="overlay"></div> -->
-  <!-- <div class="callback-popup" style="display: <?php// echo ($_POST[_wpcf7] == 150) ? block : none; ?>"> --> <!-- 150 - id формы -->
-<!--     <div class="container">
-      <?php the_content(); ?>
-    </div>          
-    <div class="control">
-      <a href="#" class="x-close"></a>
-    </div> 
-  </div> -->
+  
+
+
+
+
+
+
+
+
 
   <!-- Тут будет форма заказа -->
   <div class="popup-order-form">
-    <div class="head-block">
-      <div class="steps">
-        <a href="#step-1" class="steps step-1 active">Шаг 1</a>
-        <a href="#step-2" class="steps step-2">Шаг 2</a>
-        <a href="#step-3" class="steps step-3">Шаг 3</a>
-      </div>
-      <div class="control">
-        <a href="#" class="x-close"></a>
+    <form name="order" id="order" action="" method="post">
+      <div class="head-block">
+        <div class="steps">
+          <a href="#step-1" class="steps step-1 active">Шаг 1</a>
+          <a href="#step-2" class="steps step-2">Шаг 2</a>
+          <a href="#step-3" class="steps step-3">Шаг 3</a>
+        </div>
+        <div class="control">
+          <a href="#" class="x-close"></a>
+        </div> 
+        <div class="form-content" id="step-1">
+          <h3>Выберите способ доставки</h3>
+          <span class="err">Нужно выбрать способ доставки</span>
+          <div class="delivery">
+            <input name="delivery" id="nova-poshta" type="radio" value="Доставка по Украине «Новая почта»">
+            <label for="nova-poshta">Доставка по Украине</label>
+            <p>
+              <img src="<?php bloginfo('template_url');?>/images/nova-poshta.png">
+              Оплата доставки согласно тарифам Новой Почты на момент получения
+            </p>        
+          </div>
+          <div class="delivery">
+            <input name="delivery" id="carrier" type="radio" value="Доставка курьером по Киеву">
+            <label for="carrier">Доставка курьером по&nbsp;Киеву</label>
+            <p>
+              Оплата наличными на момент получения. <br>
+              Стоимость доставки:<br>
+              <strong>35</strong> грн - при заказе 1-ой карты<br>
+              <strong>15-20</strong> грн - при оптовом заказе (свыше 10 карт)
+            </p>      
+          </div>        
+          <div class="control">
+            <a href="#step-2" class="steps step-2 button red">Далее</a>
+          </div>
+        </div>
+
+        <div class="form-content" id="step-2">
+          <h3>Контакты и адрес доставки:</h3>
+          <ul class="col-1">
+            <li>
+              <label for="username">Имя <span class="err">Ошибка ввода</span></label> 
+              <input name="username" id="username" type="text" placeholder="Имя" value="">
+            </li>
+            <li>
+              <label for="email">E-Mail <span class="err">Ошибка ввода</span></label> 
+              <input name="email" id="email" type="text" placeholder="E-Mail" value="">
+            </li>
+            <li>
+              <label for="city">Город <span class="err">Ошибка ввода</span></label> 
+              <input name="city" id="city" type="text" placeholder="Город" value="">
+            </li>
+            <li class="house">
+              <label for="house">Дом <br><span class="err">Ошибка ввода</span></label> 
+              <input name="house" id="house" type="text" placeholder="Дом" value="">
+            </li>
+            <li class="flat">
+              <label for="flat">Квартира <br><span class="err">Ошибка ввода</span></label> 
+              <input name="flat" id="flat" type="text" placeholder="Квартира" value="">
+            </li>
+          </ul>
+          <ul class="col-2"> 
+            <li>
+              <label for="surname">Фамилия <span class="err">Ошибка ввода</span></label> 
+              <input name="surname" id="surname" type="text" placeholder="Фамилия" value="">
+            </li>            
+            <li>
+              <label for="phone">Телефон <span class="err">Ошибка ввода</span></label> 
+              <input name="phone" id="phone" type="text" placeholder="Телефон" value="">
+            </li>
+            <li>
+              <label for="street">Улица <span class="err">Ошибка ввода</span></label> 
+              <input name="street" id="street" type="text" placeholder="Улица" value="">
+            </li>
+            <li>
+              <div class="req-memo">Все поля обязательны для заполнения</div>
+            </li>
+          </ul>
+          <div class="cfx"></div>
+          <div class="control">
+            <a href="#step-3" class="steps step-3 button red">Далее</a>
+          </div>
+        </div>
+
+        <div class="form-content" id="step-3">
+          <ul>
+            <li>
+              <label for="quantity">Кол-во карт:</label>
+                <div class="drop-down" id="quantity">
+                  <input name="quantity" type="text" placeholder="1" value="1">
+                  <ul>
+                    <?php for ($i=1; $i <= 20; $i++) :?>
+                        <li><?php echo $i; ?></li>
+                      <?php endfor; ?>
+                  </ul>
+                </div>             
+            </li>
+            <li>
+              <label for="payment">Оплата:</label>
+                <div class="drop-down" id="payment">
+                  <input name="payment" type="text" placeholder="Онлайн (Monexy)" readonly="readonly" value="Онлайн (Monexy)">
+                  <ul>
+                    <li>Онлайн (Monexy)</li>
+                    <li>Наличными курьеру</li>
+                    <li title="Наличными в отделении Новой Почты">Наличными в отделении Новой Почты</li>
+                  </ul>
+                </div>             
+            </li>
+          </ul>
+          <div class="summa"><strong>Сумма:</strong> 200 грн</div>
+          <div class="delivery-memo">Доставка оплачивается отдельно от суммы заказа</div>
+          <div class="control">
+            <a href="#submit" class="steps submit button red">Подтвердить</a>
+          </div>
+        </div>
       </div> 
-      <div class="form-content" id="step-1">
-        <h3>Выберите способ доставки</h3>
-        <div class="delivery">
-          <input name="delivery" id="nova-poshta" type="radio" value="nova-poshta">
-          <label for="nova-poshta">Доставка по Украине</label>
-          <p>
-            <img src="images/nova-poshta.png">
-            Оплата доставки согласно тарифам Новой Почты на момент получения
-          </p>        
-        </div>
-        <div class="delivery">
-          <input name="delivery" id="carrier" type="radio" value="carrier">
-          <label for="carrier">Доставка курьером по&nbsp;Киеву</label>
-          <p>
-            Оплата наличными на момент получения. <br>
-            Стоимость доставки:<br>
-            <strong>35</strong> грн - при заказе 1-ой карты<br>
-            <strong>15-20</strong> грн - при оптовом заказе (свыше 10 карт)
-          </p>      
-        </div>        
-      </div>
-      <div class="control">
-        <a href="#step-2" id="to-step-2" class="button red">Далее</a>
-      </div>
-
-      <div class="form-content" id="step-2">
-        <h3>Контакты и адрес доставки:</h3>
-        <ul>
-          <li>
-            <label for="name">Имя</label> 
-            <input name="name" type="text" placeholder="Имя" value="">
-          </li>
-          <li>
-            <label for="surname">Фамилия</label> 
-            <input name="surname" type="text" placeholder="Фамилия" value="">
-          </li>
-          <li>
-            <label for="email">E-Mail</label> 
-            <input name="email" type="text" placeholder="E-Mail" value="">
-          </li>
-          <li>
-            <label for="phone">Телефон</label> 
-            <input name="phone" type="text" placeholder="Телефон" value="">
-          </li>
-          <li>
-            <label for="city">Город</label> 
-            <input name="city" type="text" placeholder="Город" value="">
-          </li>
-          <li>
-            <label for="street">Улица</label> 
-            <input name="street" type="text" placeholder="Улица" value="">
-          </li>
-          <li>
-            <label for="house">Дом</label> 
-            <input name="house" type="text" placeholder="Дом" value="">
-          </li>
-          <li>
-            <label for="flat">Улица</label> 
-            <input name="flat" type="text" placeholder="Квартира" value="">
-          </li>
-        </ul>
-        <div class="req-memo">Все поля обязательны для заполнения</div>
-        <div class="control">
-          <a href="#step-3" id="to-step-3" class="button red">Далее</a>
-        </div>
-      </div>
-
-      <div class="form-content" id="step-3">
-        <ul>
-          <li>
-            <label for="quantity">Кол-во карт:</label>
-              <div class="drop-down" id="quantity">
-                <input name="quantity" type="text" placeholder="1" readonly="readonly" value="">
-                <ul>
-                  <li>1</li>
-                  <li>2</li>
-                </ul>
-              </div>             
-          </li>
-          <li>
-            <label for="payment">Оплата:</label>
-              <div class="drop-down" id="payment">
-                <input name="payment" type="text" placeholder="Онлайн (Monexy)" readonly="readonly" value="">
-                <ul>
-                  <li>Онлайн (Monexy)</li>
-                </ul>
-              </div>             
-          </li>
-        </ul>
-        <div class="delivery-memo">Доставка оплачивается отдельно от суммы заказа</div>
-        <div class="control">
-          <a href="#step-3" id="to-step-3" class="button red">Подтвердить</a>
-        </div>
-      </div>
-    </div>          
-  </div>    
-
-  <script type="text/javascript">
-  (function(){
-    land_handler();
-  }());
-  </script>
+    </form>         
+  </div>  
 
 </body>
 </html>

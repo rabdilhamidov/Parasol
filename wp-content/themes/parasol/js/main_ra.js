@@ -1,8 +1,11 @@
+$(function () {
+  center_slide();
+  land_handler();
+});
 function land_handler() {
   // Инициализация переменных
   var slogan;
   var rules_popup = $('.rules-popup');
-  var order_form_popup = $('.popup-order-form');
   var rules_ch = $('input#rules');
   $(rules_ch).prop({ 'checked': false });
   // Слайдер
@@ -22,6 +25,10 @@ function land_handler() {
     });
   // кружочки-вопросы
   circles();
+  // центрирование изображения в слайдере
+  $(window).resize(function () {
+    center_slide();
+  });
   // дроп-даун
   var dropDown = function (event) {
     event.preventDefault();
@@ -40,11 +47,6 @@ function land_handler() {
     };
     $parentObj.addClass('open');
     $('body').on('click', '*', closeDrobdown);
-  };
-  // форма заказа
-  var order_form = function (event) {
-    event.preventDefault();
-    $(order_form_popup).fadeIn(300);
   };
   /*
   */
@@ -80,15 +82,12 @@ function land_handler() {
       bar: '.scroller__bar',
       barOnCls: 'baron'
     });
-  }).on('click', 'a#buy-card', order_form).on('click', '.popup-order-form .control .x-close', function (event) {
-    event.preventDefault();
-    $(order_form_popup).fadeOut(300);
   }).on('click', 'div.drop-down', dropDown).on('click', 'a.top-arr', function (event) {
     event.preventDefault();
     $('html, body').animate({ scrollTop: 0 }, 1000);
   });
 }
-// --
+// -- 
 function circles() {
   var arCircles = $('section#questions').find('li');
   var arColors = [
@@ -115,4 +114,13 @@ function circles() {
   arCircles.mouseleave(function () {
     $(arCircles).animate({ backgroundColor: arColors[3] }, 0);
   });
+}
+function center_slide() {
+  var slide_img = $('.slide').find('img');
+  if ($(window).width() < 1920) {
+    var ml = ($(window).width() - 1920) * 0.5 + 'px';
+    slide_img.css({ 'margin-left': ml });
+  } else {
+    slide_img.css({ 'margin-left': 0 });
+  }
 }
