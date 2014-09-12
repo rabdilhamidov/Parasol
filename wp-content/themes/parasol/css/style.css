@@ -302,6 +302,9 @@ section#buy-card p {
     section#buy-card p.rules input#rules {
       vertical-align: -2px;
       margin-right: 5px; }
+section#buy-card form {
+  display: inline-block;
+  margin-left: 20px; }
 section#trust ul li {
   display: inline-block;
   width: 200px;
@@ -468,7 +471,7 @@ section#questions {
   section#questions ul {
     font-family: 'avantgardegothiccbold';
     color: #524e49;
-    margin: 40px 0 20px;
+    margin-top: 20px;
     padding-left: 10px;
     text-align: left; }
     section#questions ul li {
@@ -481,14 +484,16 @@ section#questions {
       margin-right: 10px;
       margin-bottom: 10px; }
       section#questions ul li p {
-        display: inline-block;
         width: 135px;
         height: 130px;
         text-align: center;
         margin-top: 20px;
         padding: 20px 0;
         overflow: hidden;
-        margin-left: 25px; }
+        margin-left: 25px;
+        white-space: normal; }
+      section#questions ul li:hover {
+        background: #afadab; }
 section#differents .title {
   margin-bottom: 34px; }
   section#differents .title h2 {
@@ -756,6 +761,49 @@ section#contacts {
   font-size: 10px;
   color: #f10134;
   display: none; }
+
+/*Plugin CSS*/
+.str_wrap {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  white-space: nowrap; }
+
+.str_move {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: move; }
+
+.str_move_clone {
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  left: 100%;
+  top: 0; }
+
+.str_vertical .str_move_clone {
+  left: 0;
+  top: 100%; }
+
+.str_down .str_move_clone {
+  left: 0;
+  bottom: 100%; }
+
+.str_vertical .str_move, .str_down .str_move {
+  white-space: normal;
+  width: 100%; }
+
+.str_static .str_move, .no_drag .str_move, .noStop .str_move {
+  cursor: inherit; }
+
+.str_wrap img {
+  max-width: none !important; }
 
 /**
  * 4.1 Site Header
@@ -1210,42 +1258,11 @@ input:focus, textarea:focus {
 
 /* Buttons */
 button, input[type="submit"], input[type="button"], input[type="reset"] {
-  background: #e05d22;
-  /* Old browsers */
-  background: -webkit-linear-gradient(top, #e05d22 0%, #d94412 100%);
-  /* Chrome 10+, Safari 5.1+ */
-  background: -webkit-gradient(linear, left top, left bottom, from(#e05d22), to(#d94412));
-  background: linear-gradient(to bottom, #e05d22 0%, #d94412 100%);
-  /* W3C */
-  border: none;
-  border-bottom: 3px solid #b93207;
+  padding: 8px 18px 10px;
+  background-color: #f10134;
   border-radius: 2px;
   color: #fff;
-  display: inline-block;
-  padding: 11px 24px 10px;
-  text-decoration: none; }
-
-button:hover, button:focus, input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:focus, input[type="button"]:focus, input[type="reset"]:focus {
-  background: #ed6a31;
-  /* Old browsers */
-  background: -webkit-linear-gradient(top, #ed6a31 0%, #e55627 100%);
-  /* Chrome 10+, Safari 5.1+ */
-  background: -webkit-gradient(linear, left top, left bottom, from(#ed6a31), to(#e55627));
-  background: linear-gradient(to bottom, #ed6a31 0%, #e55627 100%);
-  /* W3C */
-  outline: none; }
-
-button:active, input[type="submit"]:active, input[type="button"]:active, input[type="reset"]:active {
-  background: #d94412;
-  /* Old browsers */
-  background: -webkit-linear-gradient(top, #d94412 0%, #e05d22 100%);
-  /* Chrome 10+, Safari 5.1+ */
-  background: -webkit-gradient(linear, left top, left bottom, from(#d94412), to(#e05d22));
-  background: linear-gradient(to bottom, #d94412 0%, #e05d22 100%);
-  /* W3C */
-  border: none;
-  border-top: 3px solid #b93207;
-  padding: 10px 24px 11px; }
+  border: 0 none; }
 
 .post-password-required input[type="submit"] {
   padding: 7px 24px 4px;

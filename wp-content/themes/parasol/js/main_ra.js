@@ -1,5 +1,4 @@
 $(function () {
-  center_slide();
   land_handler();
 });
 function land_handler() {
@@ -15,6 +14,8 @@ function land_handler() {
       onSliderLoad: function (currentIndex) {
         slogan = $('#slider').find('.slogan');
         $(slogan).animate({ top: 100 }, 200);
+        // Центровка слайдов
+        center_slide();
       },
       onSlideBefore: function ($slideElement) {
         $(slogan).css({ top: 485 }, 200);
@@ -23,12 +24,12 @@ function land_handler() {
         $(slogan).animate({ top: 100 }, 200);
       }
     });
-  // кружочки-вопросы
-  circles();
   // центрирование изображения в слайдере
   $(window).resize(function () {
     center_slide();
   });
+  // кружочки-вопросы
+  circles();
   // дроп-даун
   var dropDown = function (event) {
     event.preventDefault();
@@ -86,33 +87,31 @@ function land_handler() {
     event.preventDefault();
     $('html, body').animate({ scrollTop: 0 }, 1000);
   });
+  $('.run-str-1').liMarquee({ scrollamount: 100 });
+  $('.run-str-2').liMarquee({ scrollamount: 50 });
 }
-// -- 
 function circles() {
-  var arCircles = $('section#questions').find('li');
+  var arCircles = $('section#questions').find('ul li');
   var arColors = [
       '#afadab',
       '#c2c2c2',
       '#d9d8d6',
       '#e7e7e7'
     ];
-  var cols = 5;
-  var this_i;
-  var speed = 100;
+  var speed = 500;
   arCircles.mouseover(function () {
-    this_i = $(this).index();
-    $(this).animate({ backgroundColor: arColors[0] }, 0);
-    $(this).prev().not('.col-5').animate({ backgroundColor: arColors[1] }, speed);
-    $(this).next().not('.col-1').animate({ backgroundColor: arColors[1] }, speed);
-    $(arCircles[this_i - 5]).animate({ backgroundColor: arColors[1] }, speed);
-    $(arCircles[this_i + 5]).animate({ backgroundColor: arColors[1] }, speed);
-    $(this).prev().prev().not('.col-4').not('.col-5').animate({ backgroundColor: arColors[2] }, speed);
-    $(this).next().next().not('.col-1').not('.col-2').animate({ backgroundColor: arColors[2] }, speed);
-    $(arCircles[this_i - 10]).animate({ backgroundColor: arColors[2] }, speed);
-    $(arCircles[this_i + 10]).animate({ backgroundColor: arColors[2] }, speed);
+    $(this).css({ backgroundColor: arColors[0] });
+    $(this).prev().css({ backgroundColor: arColors[1] });
+    $(this).next().css({ backgroundColor: arColors[1] });
+    $(this).prev().prev().css({ backgroundColor: arColors[2] });
+    $(this).next().next().css({ backgroundColor: arColors[2] });
   });
   arCircles.mouseleave(function () {
-    $(arCircles).animate({ backgroundColor: arColors[3] }, 0);
+    $(this).css({ backgroundColor: arColors[3] });
+    $(this).prev().css({ backgroundColor: arColors[3] });
+    $(this).next().css({ backgroundColor: arColors[3] });
+    $(this).prev().prev().css({ backgroundColor: arColors[3] });
+    $(this).next().next().css({ backgroundColor: arColors[3] });
   });
 }
 function center_slide() {

@@ -24,7 +24,8 @@
     <script type="text/javascript" src="<?php bloginfo('template_url');?>/vendor/jquery.min.js"></script>
     <script src="<?php bloginfo('template_url');?>/vendor/jquery.color.min.js"></script>      
     <script src="<?php bloginfo('template_url');?>/vendor/jquery.bxslider.min.js"></script>
-    <script src="<?php bloginfo('template_url');?>/vendor/baron.min.js"></script>    
+    <script src="<?php bloginfo('template_url');?>/vendor/baron.min.js"></script>
+    <script src="<?php bloginfo('template_url');?>/vendor/jquery.liMarquee.js"></script>           
     <script type="text/javascript" src="<?php bloginfo('template_url');?>/js/main_ra.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url');?>/js/order_form.js"></script>
     <link rel="shortcut icon" href="<?php bloginfo('template_url');?>/favicon.ico">
@@ -111,6 +112,46 @@
             <label for="rules" class="checkbox">с правилами предоставления услуг ознакомлен</label>
           </p>       
           <a href="#" id="buy-card" class="red-button buy-card">Купить</a>
+
+
+          <!-- ================  Monexy ================== -->
+          <?php
+          $params = array();
+          $params["myMonexyMerchantCurrency"] = "UAH";
+          $params["myMonexyMerchantFailUrl"] = "http://911help.cards/?pay=fail";
+          $params["myMonexyMerchantID"] = 104277569;
+          $params["myMonexyMerchantOrderDesc"] = "Карта 911help";
+          $params["myMonexyMerchantOrderId"] = rand(0, 9999);
+          $params["myMonexyMerchantResultUrl"] = "http://911help.cards/?pay=result";
+          $params["myMonexyMerchantShopName"] = "911help.cards";
+          $params["myMonexyMerchantSuccessUrl"] = "http://911help.cards/?pay=success";
+          $params["myMonexyMerchantSum"] = "200";
+          $params["myMonexyMerchantExpTime"] = "168";
+
+          ksort($params);
+          $req_str = ''; // первоначальное значение строки данных для подписи
+          foreach($params AS $pkey => $pval) $req_str.=($pkey.'='.$pval);
+          $params["myMonexyMerchantHash"] = md5($req_str); 
+          ?>
+
+          <form id="payment " method="POST" action="https://www.monexy.ua/merchant/merchant.php">
+              <input type="hidden" name="myMonexyMerchantCurrency" value="<?php echo $params["myMonexyMerchantCurrency"] ?>">
+              <input type="hidden" name="myMonexyMerchantFailUrl" value="<?php echo $params["myMonexyMerchantFailUrl"] ?>">
+              <input type="hidden" name="myMonexyMerchantID" value="<?php echo $params["myMonexyMerchantID"] ?>">
+              <input type="hidden" name="myMonexyMerchantOrderDesc" value="<?php echo $params["myMonexyMerchantOrderDesc"] ?>">
+              <input type="hidden" name="myMonexyMerchantOrderId" value="<?php echo $params["myMonexyMerchantOrderId"] ?>">
+              <input type="hidden" name="myMonexyMerchantResultUrl" value="<?php echo $params["myMonexyMerchantResultUrl"] ?>">
+              <input type="hidden" name="myMonexyMerchantShopName" value="<?php echo $params["myMonexyMerchantShopName"] ?>">
+              <input type="hidden" name="myMonexyMerchantSuccessUrl" value="<?php echo $params["myMonexyMerchantSuccessUrl"] ?>">
+              <input type="hidden" name="myMonexyMerchantSum" value="<?php echo $params["myMonexyMerchantSum"] ?>">
+              <input type="hidden" name="myMonexyMerchantExpTime" value="<?php echo $params["myMonexyMerchantExpTime"] ?>">
+              <input type="hidden" name="myMonexyMerchantHash" value="<?php echo $params["myMonexyMerchantHash"] ?>">
+              <input type="submit" class="buy-card-online" value="Купить онлайн" />
+          </form>
+          <!-- ================  /Monexy ================== -->
+
+
+
         </div>
       </section>
       
@@ -203,20 +244,28 @@
           <div class="triangle"></div>
         </div>
         <div class="content-block">
-          <ul>
-            <?php 
-            $cols = 5; 
-            $col_number = 0;
-            foreach ($ar_questions as $key => $question): 
-              if ($col_number < $cols){
-                $col_number++;
-              }else{
-                $col_number = 1;
-              }
-            ?>
-              <li class="col-<?php echo $col_number; ?>"><p><?php echo $question; ?></p></li>
-            <?php endforeach ?>
-          </ul>
+          <div class="run-str-1 str_wrap">
+            <ul>
+              <?php 
+              $cols = 5; 
+              $col_number = 0;
+              foreach ($ar_questions as $key => $question): 
+              ?>
+                <li class="col-<?php echo $col_number; ?>"><p><?php echo $question; ?></p></li>
+              <?php endforeach ?>
+            </ul>
+          </div>
+          <div class="run-str-2 str_wrap">
+            <ul>
+              <?php 
+              $cols = 5; 
+              $col_number = 0;
+              foreach ($ar_questions as $key => $question): 
+              ?>
+                <li class="col-<?php echo $col_number; ?>"><p><?php echo $question; ?></p></li>
+              <?php endforeach ?>
+            </ul>
+          </div>
           <?php edit_post_link( __( 'Edit')); ?>
         </div>
       </section> 
@@ -263,7 +312,20 @@
               </div>
               <a href="#" id="rules" class="button black">Правила<br>предоставления услуг</a>
             </li>
-            <li><a href="#" id="passport911" class="button grey">Паспорт 911</a></li>
+            <?php  
+              $post = get_post_slug('pasport911');
+              if($post->ID){
+                $args = array(
+                  'post_parent' => $post->ID, 
+                  'post_type' => 'attachment',
+                  'orderby' => 'date',
+                  'order' => 'DESC',
+                  'numberposts' => 1
+                );
+                $attachments = get_posts($args);
+              }
+            ?>
+            <li><a href="<?php echo $attachments[0]->guid; ?>" id="passport911" class="button grey">Как это работает</a></li>
             <li><a href="#" id="buy" class="button red buy-card">Купить</a></li>
           </ul>
           <ul class="logos">
@@ -282,16 +344,6 @@
     </div><!-- #main -->
       <!-- <div class="push"></div> -->  
   </div><!-- #page -->
-
-  
-
-
-
-
-
-
-
-
 
   <!-- Тут будет форма заказа -->
   <div class="popup-order-form">

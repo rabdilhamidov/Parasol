@@ -1,11 +1,11 @@
 <?php
 header("Content-type: text/html; charset=utf-8");
 require($_SERVER['DOCUMENT_ROOT'].'/wp-load.php');
-$post = get_post_slug('orderform'); setup_postdata($post);
 
+// отправка на почту
+$post = get_post_slug('orderform'); setup_postdata($post);
 $to  = get("order_form_e_mail");
 $subject = "Заказ с сайта 911help.card";
-
 $message = "
 <html>
     <head>
@@ -23,10 +23,8 @@ $message = "
         Адрес<br> г. ".$_POST['city']. " ул.: " .$_POST['street']. ", дом: " .$_POST['house']. ", кв.: " .$_POST['flat']."</p>
     </body>
 </html>";
-
 $headers  = "Content-type: text/html; charset=utf-8 \r\n";
 $headers .= "From: 911help.card <911help@card.ua>\r\n";
-
 mail($to, $subject, $message, $headers);
 echo "Заказ отправлен";
 ?>

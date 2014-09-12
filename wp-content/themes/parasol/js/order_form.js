@@ -11,7 +11,17 @@ $(function () {
   var prev_activ_step = $(order_form_popup).find('.head-block a.step-1');
   var order_form = function (event) {
     event.preventDefault();
-    $(order_form_popup).fadeIn(300);
+    if ($('input#rules').prop('checked')) {
+      $(order_form_popup).fadeIn(300);
+    } else {
+      alert('\u041f\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043b\u044c\u043d\u043e \u0412\u044b \u0434\u043e\u043b\u0436\u043d\u044b \u043e\u0437\u043d\u0430\u043a\u043e\u043c\u0438\u0442\u044c\u0441\u044f \u0441 \u043f\u0440\u0430\u0432\u0438\u043b\u0430\u043c\u0438 \u043f\u0440\u0435\u0434\u043e\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u0438\u044f \u0443\u0441\u043b\u0443\u0433.');
+    }
+  };
+  var buy_monexy = function (event) {
+    if (!$('input#rules').prop('checked')) {
+      event.preventDefault();
+      alert('\u041f\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043b\u044c\u043d\u043e \u0412\u044b \u0434\u043e\u043b\u0436\u043d\u044b \u043e\u0437\u043d\u0430\u043a\u043e\u043c\u0438\u0442\u044c\u0441\u044f \u0441 \u043f\u0440\u0430\u0432\u0438\u043b\u0430\u043c\u0438 \u043f\u0440\u0435\u0434\u043e\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u0438\u044f \u0443\u0441\u043b\u0443\u0433.');
+    }
   };
   var steps_nav = function (event) {
     event.preventDefault();
@@ -154,7 +164,7 @@ $(function () {
   /*
   */
   $(document).ready(function () {
-  }).on('click', 'a.buy-card', order_form).on('click', '.popup-order-form .control .x-close', function (event) {
+  }).on('click', 'a.buy-card', order_form).on('click', '.buy-card-online', buy_monexy).on('click', '.popup-order-form .control .x-close', function (event) {
     event.preventDefault();
     $(order_form_popup).fadeOut(300);
   }).on('click', 'a.steps', steps_nav).on('mouseup', '.drop-down#quantity ul li', get_sum);
