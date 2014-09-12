@@ -299,6 +299,9 @@ section#buy-card p {
     font-size: 14px;
     font-family: 'avantgardegothiccbold';
     margin-bottom: 30px; }
+    section#buy-card p.rules label {
+      text-decoration: underline;
+      cursor: pointer; }
     section#buy-card p.rules input#rules {
       vertical-align: -2px;
       margin-right: 5px; }

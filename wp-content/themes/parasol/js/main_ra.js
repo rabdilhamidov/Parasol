@@ -71,9 +71,9 @@ function land_handler() {
   }).on('click', '.rules-popup .control .x-close', function (event) {
     event.preventDefault();
     $(this).parent().parent().hide(300);
-  }).on('click', 'input#rules', function (event) {
+  }).on('click', '.rules label', function (event) {
     $(rules_ch).prop({ 'checked': true });
-    $(this).before($(rules_popup));
+    $(this).prev().before($(rules_popup));
     $(rules_popup).find('.triangle').css({ 'margin-left': 205 });
     $(rules_popup).css({ 'margin-left': 50 });
     $(rules_popup).show(300);

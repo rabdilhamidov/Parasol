@@ -69,6 +69,7 @@ $(function () {
       var sum = $('input[name=quantity]').val() * 200;
       $('.summa').html('<strong>\u0421\u0443\u043c\u043c\u0430:</strong> ' + sum + ' \u0433\u0440\u043d');
     }
+    // Подтвердить
     if ($(this).hasClass('submit')) {
       is_err_1 = validate_step1();
       is_err_2 = validate_step2();
@@ -93,6 +94,8 @@ $(function () {
       alert(data);
       $(order_form_popup).fadeOut(300);
     }
+    /*
+    */
     function validate_step2() {
       var regsObj = {
           EMAIL: /^[a-z0-9](?:[a-z0-9_\.-]*[a-z0-9])*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])*\.)+[a-z]{2,4}$/i,
