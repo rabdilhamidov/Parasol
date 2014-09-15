@@ -26,6 +26,8 @@ $message = "
 $headers  = "Content-type: text/html; charset=utf-8 \r\n";
 $headers .= "From: 911help.card <911help@card.ua>\r\n";
 mail($to, $subject, $message, $headers);
-echo "Заказ отправлен";
+
+echo "Заказ отправлен.";
 ?>
+
 

@@ -1,4 +1,6 @@
 $(function () {
+  var price = 200;
+  //стоимость карты
   var order_form_popup = $('.popup-order-form');
   var steps = $('.form-content');
   var step1 = $(order_form_popup).find('.form-content#step-1');
@@ -84,15 +86,19 @@ $(function () {
         alert('\u041e\u0448\u0438\u0431\u043a\u0430 \u0432\u0432\u043e\u0434\u0430 \u043d\u0430 \u0442\u0440\u0435\u0442\u044c\u0435\u043c \u0448\u0430\u0433\u0435: ' + is_err_3);
       }
       if (!is_err_1 && !is_err_2 & !is_err_3) {
-        // alert( location.hostname);
         var script = '/wp-content/themes/parasol/ajax_send_order.php';
         $.post(script, form_data, onAjaxSuccess);
       }
     }
     function onAjaxSuccess(data) {
       // Здесь мы получаем данные, отправленные сервером и выводим их на экран.
-      alert(data);
       $(order_form_popup).fadeOut(300);
+      if (form_data.payment == '\u041e\u043d\u043b\u0430\u0439\u043d (Monexy)') {
+        var sum = form_data.quantity * price;
+        location = '/wp-content/themes/parasol/to_monexy.php?sum=' + sum;
+      } else {
+        alert(data);
+      }
     }
     /*
     */
@@ -161,13 +167,13 @@ $(function () {
   };
   var get_sum = function (event) {
     event.preventDefault();
-    var sum = $(this).text() * 200;
+    var sum = $(this).text() * price;
     $('.summa').html('<strong>\u0421\u0443\u043c\u043c\u0430:</strong> ' + sum + ' \u0433\u0440\u043d');
   };
   /*
   */
   $(document).ready(function () {
-  }).on('click', 'a.buy-card', order_form).on('click', '.buy-card-online', buy_monexy).on('click', '.popup-order-form .control .x-close', function (event) {
+  }).on('click', 'a.buy-card', order_form).on('click', '.popup-order-form .control .x-close', function (event) {
     event.preventDefault();
     $(order_form_popup).fadeOut(300);
   }).on('click', 'a.steps', steps_nav).on('mouseup', '.drop-down#quantity ul li', get_sum);
