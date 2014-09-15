@@ -20,15 +20,26 @@
       <link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/ie.css" type="text/css" media="screen, projection">
     <![endif]-->    
 
-    <link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/style.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/style.min.css" type="text/css" media="screen, projection">
     <script type="text/javascript" src="<?php bloginfo('template_url');?>/vendor/jquery.min.js"></script>
     <script src="<?php bloginfo('template_url');?>/vendor/jquery.color.min.js"></script>      
     <script src="<?php bloginfo('template_url');?>/vendor/jquery.bxslider.min.js"></script>
     <script src="<?php bloginfo('template_url');?>/vendor/baron.min.js"></script>
-    <script src="<?php bloginfo('template_url');?>/vendor/jquery.liMarquee.js"></script>           
-    <script type="text/javascript" src="<?php bloginfo('template_url');?>/js/main_ra.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('template_url');?>/js/order_form.js"></script>
+    <script src="<?php bloginfo('template_url');?>/js/jquery.liMarquee.min.js"></script>           
+    <script type="text/javascript" src="<?php bloginfo('template_url');?>/js/main_ra.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_url');?>/js/order_form.min.js"></script>
     <link rel="shortcut icon" href="<?php bloginfo('template_url');?>/favicon.ico">
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54646434-1', 'auto');
+  ga('send', 'pageview');
+  </script> 
+
 </head>
 
 <body>
@@ -37,7 +48,7 @@
     <header id="masthead" class="site-header" role="banner">
       <div class="content-block">
         <a class="home-link" href="http://my-parasol.com/" title="Parasol" rel="home">
-          <h1 class="site-title"></h1>
+          <h1 class="site-title">Parasol Social Poject</h1>
         </a>
         <?php $post = get_post_slug('contacts'); setup_postdata($post);?>
         <nav id="site-navigation" class="navigation main-navigation" role="navigation">
@@ -46,8 +57,8 @@
                 <?php the_content();?>
             </li>
             <li id="all-ukraine" class="menu-item">Вся&nbsp;Украина</li>
-            <li id="how-works" class="menu-item">Работаем&nbsp;24/7</li>
-            <li id="buy-card" class="menu-item"><a href="#" class="button red header buy-card">Купить</a></li>
+            <li id="time-works" class="menu-item">Работаем&nbsp;24/7</li>
+            <li class="menu-item"><a href="#" class="button red header buy-card">Купить</a></li>
           </ul>
         </nav>
       </div>
@@ -66,7 +77,7 @@
       ?> 
       <section id="slider">
         <div class="red200grn">
-          <img src="<?php bloginfo('template_url');?>/images/200grn.png">
+          <img src="<?php bloginfo('template_url');?>/images/200grn.png" alt="">
         </div>
         <ul class="bxslider">
           <?php 
@@ -75,7 +86,9 @@
           <li>
             <div class="slogan">
               <h2>
-                <?php echo the_content(); ?>
+                <?php 
+                remove_filter ("the_content", "wpautop");
+                echo the_content(); ?>
               </h2>
               <?php edit_post_link( __( 'Edit')); ?>
             </div>            
@@ -111,13 +124,13 @@
             <input id="rules" type="checkbox" name="rules" value="y">
             <label for="rules" class="checkbox">с правилами предоставления услуг ознакомлен</label>
           </p>       
-          <a href="#" id="buy-card" class="red-button buy-card">Купить</a>
+          <a href="#" class="red-button buy-card">Купить</a>
         </div>
       </section>
       
       <?php $post = get_post_slug('tasks'); setup_postdata($post);?>
       <section id="tasks" class="type-2">
-        <div class="red200grn"><img src="<?php bloginfo('template_url');?>/images/200grn.png"></div> 
+        <div class="red200grn"><img src="<?php bloginfo('template_url');?>/images/200grn.png" alt=""></div> 
         <div class="title">
           <h2>Мы решим Ваши задачи</h2>
           <div class="triangle"></div>
@@ -167,7 +180,7 @@
 
       <?php $post = get_post_slug('how-it-works'); setup_postdata($post);?>
       <section id="how-works" class="type-1 dark">
-        <div class="red200grn"><img src="<?php bloginfo('template_url');?>/images/200grn.png"></div>        
+        <div class="red200grn"><img src="<?php bloginfo('template_url');?>/images/200grn.png" alt=""></div>        
         <div class="title">
           <h2><?php the_title();?></h2>
           <p><?php the_content();?></p>
@@ -232,7 +245,7 @@
 
       <?php $post = get_post_slug('differents'); setup_postdata($post);?>
       <section id="differents" class="type-1 dark">
-        <div class="red200grn"><img src="<?php bloginfo('template_url');?>/images/200grn.png"></div>        
+        <div class="red200grn"><img src="<?php bloginfo('template_url');?>/images/200grn.png" alt=""></div>        
         <div class="title">
           <h2><?php the_title();?></h2>
         </div>
@@ -270,7 +283,7 @@
                 </div>   
                 <div class="triangle"></div>          
               </div>
-              <a href="#" id="rules" class="button black">Правила<br>предоставления услуг</a>
+              <a href="#" id="rules-btn" class="button black">Правила<br>предоставления услуг</a>
             </li>
             <?php  
               $post = get_post_slug('pasport911');
@@ -289,8 +302,8 @@
             <li><a href="#" id="buy" class="button red buy-card">Купить</a></li>
           </ul>
           <ul class="logos">
-            <li><a href="http://my-parasol.com/"><img src="<?php bloginfo('template_url');?>/images/contacts-parasol-logo.png"></a></li>
-            <li><a href="http://nks-service.com/"><img src="<?php bloginfo('template_url');?>/images/contacts-hkc-logo.png"></a></li>
+            <li><a href="http://my-parasol.com/"><img src="<?php bloginfo('template_url');?>/images/contacts-parasol-logo.png" alt=""></a></li>
+            <li><a href="http://nks-service.com/"><img src="<?php bloginfo('template_url');?>/images/contacts-hkc-logo.png" alt=""></a></li>
           </ul>
           <a href ="#" class="top-arr"></a>
           <?php edit_post_link( __( 'Edit')); ?>
@@ -307,7 +320,7 @@
 
   
   <div class="popup-order-form">
-    <form name="order" id="order" action="" method="post">
+    <form name="order" id="order" action="/" method="post">
       <div class="head-block">
         <div class="steps">
           <a href="#step-1" class="steps step-1 active">Шаг 1</a>
@@ -324,7 +337,7 @@
             <input name="delivery" id="nova-poshta" type="radio" value="Доставка по Украине «Новая почта»">
             <label for="nova-poshta">Доставка по Украине</label>
             <p>
-              <img src="<?php bloginfo('template_url');?>/images/nova-poshta.png">
+              <img src="<?php bloginfo('template_url');?>/images/nova-poshta.png" alt="">
               Оплата доставки согласно тарифам Новой Почты на момент получения
             </p>        
           </div>
@@ -393,7 +406,7 @@
         <div class="form-content" id="step-3">
           <ul>
             <li>
-              <label for="quantity">Кол-во карт:</label>
+              <label>Кол-во карт:</label>
                 <div class="drop-down" id="quantity">
                   <input name="quantity" type="text" placeholder="1" value="1">
                   <ul>
@@ -404,7 +417,7 @@
                 </div>             
             </li>
             <li>
-              <label for="payment">Оплата:</label>
+              <label>Оплата:</label>
                 <div class="drop-down" id="payment">
                   <input name="payment" type="text" placeholder="Онлайн (Monexy)" readonly="readonly" value="Онлайн (Monexy)">
                   <ul>
@@ -425,6 +438,34 @@
     </form>         
           
   </div>  
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+  (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+          try {
+              w.yaCounter26128020 = new Ya.Metrika({id:26128020,
+                      webvisor:true,
+                      clickmap:true,
+                      trackLinks:true,
+                      accurateTrackBounce:true});
+          } catch(e) { }
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+      if (w.opera == "[object Opera]") {
+          d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+  })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="//mc.yandex.ru/watch/26128020" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
 
 </body>
 </html>

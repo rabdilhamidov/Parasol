@@ -93,7 +93,7 @@ a {
     a.button.black {
       background-color: #302e2c;
       border: 2px solid #525252; }
-      a.button.black#rules {
+      a.button.black#rules-btn {
         font-size: 13px;
         line-height: 18px;
         padding: 5px 18px 6px; }
@@ -842,7 +842,9 @@ section#contacts {
   display: inline-block;
   width: 145px;
   height: 71px;
-  background: url(../images/logo-head.png) left center no-repeat; }
+  background: url(../images/logo-head.png) left center no-repeat;
+  font-size: 0px;
+  vertical-align: top; }
 
 nav {
   display: inline-block;

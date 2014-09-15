@@ -56,7 +56,7 @@ function land_handler() {
     event.preventDefault();
     $(this).hasClass('prev') && slider.goToPrevSlide();
     $(this).hasClass('next') && slider.goToNextSlide();
-  }).on('click', '.button#rules', function (event) {
+  }).on('click', '#rules-btn', function (event) {
     event.preventDefault();
     $(this).before($(rules_popup));
     $(rules_popup).find('.triangle').css({ 'margin-left': 340 });
