@@ -262,7 +262,7 @@
         <div class="content-block">
           <div class="phone">
             <a href="javascript: void(0);" class="where-buy"></a>
-            <?php echo the_content(); ?>
+            <p><?php echo the_content(); ?></p>
           </div> 
           <ul class="buttons">
             <li>  

@@ -897,10 +897,10 @@ nav {
         width: 69px;
         height: 47px;
         background-image: url('../images/sprite.png'); }
-    nav li.menu-item#how-works {
+    nav li.menu-item#time-works {
       width: 120px;
       text-align: center; }
-      nav li.menu-item#how-works:before {
+      nav li.menu-item#time-works:before {
         content: ' ';
         background-position: -5px -318px;
         background-repeat: no-repeat;
