@@ -13,11 +13,7 @@ $(function () {
   var prev_activ_step = $(order_form_popup).find('.head-block a.step-1');
   var order_form = function (event) {
     event.preventDefault();
-    if ($('input#rules').prop('checked')) {
-      $(order_form_popup).fadeIn(300);
-    } else {
-      alert('\u041f\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043b\u044c\u043d\u043e \u0412\u044b \u0434\u043e\u043b\u0436\u043d\u044b \u043e\u0437\u043d\u0430\u043a\u043e\u043c\u0438\u0442\u044c\u0441\u044f \u0441 \u043f\u0440\u0430\u0432\u0438\u043b\u0430\u043c\u0438 \u043f\u0440\u0435\u0434\u043e\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u0438\u044f \u0443\u0441\u043b\u0443\u0433.');
-    }
+    $(order_form_popup).fadeIn(300);
   };
   var buy_monexy = function (event) {
     if (!$('input#rules').prop('checked')) {
@@ -73,21 +69,25 @@ $(function () {
     }
     // Подтвердить
     if ($(this).hasClass('submit')) {
-      is_err_1 = validate_step1();
-      is_err_2 = validate_step2();
-      is_err_3 = validate_step3();
-      if (is_err_1) {
-        alert('\u041e\u0448\u0438\u0431\u043a\u0430 \u0432\u0432\u043e\u0434\u0430 \u043d\u0430 \u043f\u0435\u0440\u0432\u043e\u043c \u0448\u0430\u0433\u0435: ' + is_err_1);
-      }
-      if (is_err_2) {
-        alert('\u041e\u0448\u0438\u0431\u043a\u0430 \u0432\u0432\u043e\u0434\u0430 \u043d\u0430 \u0432\u0442\u043e\u0440\u043e\u043c \u0448\u0430\u0433\u0435');
-      }
-      if (is_err_3) {
-        alert('\u041e\u0448\u0438\u0431\u043a\u0430 \u0432\u0432\u043e\u0434\u0430 \u043d\u0430 \u0442\u0440\u0435\u0442\u044c\u0435\u043c \u0448\u0430\u0433\u0435: ' + is_err_3);
-      }
-      if (!is_err_1 && !is_err_2 & !is_err_3) {
-        var script = '/wp-content/themes/parasol/ajax_send_order.php';
-        $.post(script, form_data, onAjaxSuccess);
+      if ($('input#rules').prop('checked')) {
+        is_err_1 = validate_step1();
+        is_err_2 = validate_step2();
+        is_err_3 = validate_step3();
+        if (is_err_1) {
+          alert('\u041e\u0448\u0438\u0431\u043a\u0430 \u0432\u0432\u043e\u0434\u0430 \u043d\u0430 \u043f\u0435\u0440\u0432\u043e\u043c \u0448\u0430\u0433\u0435: ' + is_err_1);
+        }
+        if (is_err_2) {
+          alert('\u041e\u0448\u0438\u0431\u043a\u0430 \u0432\u0432\u043e\u0434\u0430 \u043d\u0430 \u0432\u0442\u043e\u0440\u043e\u043c \u0448\u0430\u0433\u0435');
+        }
+        if (is_err_3) {
+          alert('\u041e\u0448\u0438\u0431\u043a\u0430 \u0432\u0432\u043e\u0434\u0430 \u043d\u0430 \u0442\u0440\u0435\u0442\u044c\u0435\u043c \u0448\u0430\u0433\u0435: ' + is_err_3);
+        }
+        if (!is_err_1 && !is_err_2 & !is_err_3) {
+          var script = '/wp-content/themes/parasol/ajax_send_order.php';
+          $.post(script, form_data, onAjaxSuccess);
+        }
+      } else {
+        alert('\u041f\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043b\u044c\u043d\u043e \u0412\u044b \u0434\u043e\u043b\u0436\u043d\u044b \u043e\u0437\u043d\u0430\u043a\u043e\u043c\u0438\u0442\u044c\u0441\u044f \u0441 \u043f\u0440\u0430\u0432\u0438\u043b\u0430\u043c\u0438 \u043f\u0440\u0435\u0434\u043e\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u0438\u044f \u0443\u0441\u043b\u0443\u0433.');
       }
     }
     function onAjaxSuccess(data) {
@@ -173,7 +173,7 @@ $(function () {
   /*
   */
   $(document).ready(function () {
-  }).on('click', 'a.buy-card', order_form).on('click', '.popup-order-form .control .x-close', function (event) {
+  }).on('click', 'a.buy-card', order_form).on('click', '.pof.x-close', function (event) {
     event.preventDefault();
     $(order_form_popup).fadeOut(300);
   }).on('click', 'a.steps', steps_nav).on('mouseup', '.drop-down#quantity ul li', get_sum);

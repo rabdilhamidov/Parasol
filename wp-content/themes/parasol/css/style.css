@@ -295,16 +295,6 @@ section#buy-card p {
     section#buy-card p.price span {
       color: #f10134;
       font-family: 'avantgardegothiccbold'; }
-  section#buy-card p.rules {
-    font-size: 14px;
-    font-family: 'avantgardegothiccbold';
-    margin-bottom: 30px; }
-    section#buy-card p.rules label {
-      text-decoration: underline;
-      cursor: pointer; }
-    section#buy-card p.rules input#rules {
-      vertical-align: -2px;
-      margin-right: 5px; }
 section#buy-card form {
   display: inline-block;
   margin-left: 20px; }
@@ -545,24 +535,24 @@ section#contacts {
 
 .rules-popup {
   display: none;
-  width: 970px;
+  width: 770px;
   height: 450px;
   background-color: #e7e7e7;
   color: #737373;
   border-radius: 5px;
-  padding: 20px 10px 30px 40px;
+  padding: 20px 10px 30px 30px;
   position: absolute;
   margin-top: -470px;
-  margin-left: -300px;
+  margin-left: -150px;
   text-align: left;
-  z-index: 2; }
+  z-index: 3; }
   .rules-popup .text-container {
     position: relative;
     overflow: hidden;
     display: inline-block;
     vertical-align: top;
     text-align: left;
-    width: 890px;
+    width: 700px;
     height: 397px;
     padding-right: 20px;
     font-size: 14px; }
@@ -593,7 +583,7 @@ section#contacts {
           font-family: 'avantgardegothiccbold'; }
   .rules-popup .scroller {
     overflow-y: scroll;
-    width: 890px;
+    width: 690px;
     height: 100%;
     border: 0;
     padding-right: 20px;
@@ -626,7 +616,7 @@ section#contacts {
   .rules-popup .scroller__bar:hover {
     opacity: 0.8; }
   .rules-popup .overtext {
-    width: 900px;
+    width: 740px;
     overflow: auto;
     height: 400px;
     position: absolute;
@@ -638,7 +628,9 @@ section#contacts {
     width: 20px;
     height: 20px;
     vertical-align: top;
-    margin-left: 5px; }
+    margin-left: 5px;
+    position: relative;
+    z-index: 3; }
   .rules-popup .triangle {
     background-position: -5px -210px;
     background-repeat: no-repeat;
@@ -755,6 +747,19 @@ section#contacts {
       font-weight: 500; }
   .popup-order-form .form-content .delivery-memo {
     margin-top: 20px; }
+  .popup-order-form .form-content .rules {
+    margin-top: 20px;
+    margin-bottom: 30px; }
+    .popup-order-form .form-content .rules label {
+      text-decoration: underline;
+      cursor: pointer;
+      font-size: 14px;
+      font-family: 'avantgardegothiccregular'; }
+    .popup-order-form .form-content .rules input {
+      width: 0;
+      height: 0;
+      vertical-align: -2px;
+      margin-right: 5px; }
   .popup-order-form .control {
     float: right; }
     .popup-order-form .control a.button {

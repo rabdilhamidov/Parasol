@@ -110,30 +110,8 @@
         </div>
         <div class="content-block">
           <img src="images/parasol-card.png" alt="" />
-          <p class="price">Стоимость карты <span>200</span> грн</p>
-          <p class="rules">
-            <input id="rules" type="checkbox" name="rules" value="y">
-            <label for="rules" class="checkbox">с правилами предоставления услуг ознакомлен</label>
-          </p>       
+          <p class="price">Стоимость карты <span>200</span> грн</p>     
           <a href="#" id="buy-card" class="red-button buy-card">Купить</a>
-
-
-<form id="payment " method="POST" action="https://www.monexy.ua/merchant/merchant.php">
-    <input type="hidden" name="myMonexyMerchantCurrency" value="UAH">
-    <input type="hidden" name="myMonexyMerchantFailUrl" value="http://example.com/fail.php">
-    <input type="hidden" name="myMonexyMerchantID" value="<?php echo $merchantID ?>">
-    <input type="hidden" name="myMonexyMerchantOrderDesc" value="Карта 911help">
-    <input type="hidden" name="myMonexyMerchantOrderId" value="1520">
-    <input type="hidden" name="myMonexyMerchantResultUrl" value="http://example.com/result.php">
-    <input type="hidden" name="myMonexyMerchantShopName" value="911help">
-    <input type="hidden" name="myMonexyMerchantSuccessUrl" value="http://example.com/success.php">
-    <input type="hidden" name="myMonexyMerchantSum" value="200">
-    <input type="hidden" name="myMonexyMerchantExpTime" value="168">
-    <input type="hidden" name="myMonexyMerchantHash" value="f45c17875e6369b418b63c10942fe6dc">
-    <input type="submit" class="red-button buy-card-online" value="Купить онлайн" />
-</form>
-
-
         </div>
       </section>
 
@@ -416,7 +394,7 @@
           <a href="#step-3" class="steps step-3">Шаг 3</a>
         </div>
         <div class="control">
-          <a href="#" class="x-close"></a>
+          <a href="#" class="pof x-close"></a>
         </div> 
         <div class="form-content" id="step-1">
           <h3>Выберите способ доставки</h3>
@@ -524,12 +502,17 @@
                     <li>Онлайн (Monexy)</li>
                     <li>Наличными курьеру</li>
                     <li title="Наличными в отделении Новой Почты">Наличными в отделении Новой Почты</li>
+                    <li>
                   </ul>
                 </div>             
             </li>
           </ul>
           <div class="summa"><strong>Сумма:</strong> 200 грн</div>
           <div class="delivery-memo">Доставка оплачивается отдельно от суммы заказа</div>
+          <div class="rules">
+            <input id="rules" type="checkbox" name="rules" value="y">
+            <label for="rules" class="checkbox">с правилами предоставления услуг ознакомлен</label>
+          </div>           
           <div class="control">
             <a href="#submit" class="steps submit button red">Подтвердить</a>
           </div>

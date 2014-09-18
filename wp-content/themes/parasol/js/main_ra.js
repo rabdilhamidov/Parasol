@@ -59,8 +59,10 @@ function land_handler() {
   }).on('click', '#rules-btn', function (event) {
     event.preventDefault();
     $(this).before($(rules_popup));
-    $(rules_popup).find('.triangle').css({ 'margin-left': 340 });
-    $(rules_popup).css({ 'margin-left': -300 });
+    $(rules_popup).find('.triangle').show();
+    $(rules_popup).find('.triangle').css({ 'margin-left': 170 });
+    $(rules_popup).css({ 'margin-left': -130 });
+    $(rules_popup).css({ 'margin-top': -470 });
     $(rules_popup).show(300);
     baron({
       root: '.wrapper_1',
@@ -70,12 +72,13 @@ function land_handler() {
     });
   }).on('click', '.rules-popup .control .x-close', function (event) {
     event.preventDefault();
-    $(this).parent().parent().hide(300);
+    $('.rules-popup').hide(300);
   }).on('click', '.rules label', function (event) {
     $(rules_ch).prop({ 'checked': true });
     $(this).prev().before($(rules_popup));
-    $(rules_popup).find('.triangle').css({ 'margin-left': 205 });
-    $(rules_popup).css({ 'margin-left': 50 });
+    $(rules_popup).find('.triangle').hide();
+    $(rules_popup).css({ 'margin-left': -200 });
+    $(rules_popup).css({ 'margin-top': -300 });
     $(rules_popup).show(300);
     baron({
       root: '.wrapper_1',

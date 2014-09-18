@@ -58,7 +58,7 @@
             </li>
             <li id="all-ukraine" class="menu-item">Вся&nbsp;Украина</li>
             <li id="time-works" class="menu-item">Работаем&nbsp;24/7</li>
-            <li class="menu-item"><a href="#" class="button red header buy-card">Купить</a></li>
+            <li class="menu-item"><a href="#" class="button red header buy-card" onclick="ga('send', 'event', 'button', 'buy', 'head');">Купить</a></li>
           </ul>
         </nav>
       </div>
@@ -119,12 +119,8 @@
         </div>
         <div class="content-block">
           <img src="<?php bloginfo('template_url');?>/images/parasol-card.png" alt="" />
-          <p class="price">Стоимость карты <span>200</span> грн</p>
-          <p class="rules">
-            <input id="rules" type="checkbox" name="rules" value="y">
-            <label for="rules" class="checkbox">с правилами предоставления услуг ознакомлен</label>
-          </p>       
-          <a href="#" class="red-button buy-card">Купить</a>
+          <p class="price">Стоимость карты <span>200</span> грн</p>      
+          <a href="#" class="red-button buy-card" onclick="ga('send', 'event', 'button', 'buy', 'card');">Купить</a>
         </div>
       </section>
       
@@ -299,7 +295,7 @@
               }
             ?>
             <li><a href="<?php echo $attachments[0]->guid; ?>" id="passport911" class="button grey">Как это работает</a></li>
-            <li><a href="#" id="buy" class="button red buy-card">Купить</a></li>
+            <li><a href="#" id="buy" class="button red buy-card" onclick="ga('send', 'event', 'button', 'buy', 'footer');">Купить</a></li>
           </ul>
           <ul class="logos">
             <li><a href="http://my-parasol.com/"><img src="<?php bloginfo('template_url');?>/images/contacts-parasol-logo.png" alt=""></a></li>
@@ -328,7 +324,7 @@
           <a href="#step-3" class="steps step-3">Шаг 3</a>
         </div>
         <div class="control">
-          <a href="#" class="x-close"></a>
+          <a href="#" class="pof x-close"></a>
         </div> 
         <div class="form-content" id="step-1">
           <h3>Выберите способ доставки</h3>
@@ -352,7 +348,7 @@
             </p>      
           </div>        
           <div class="control">
-            <a href="#step-2" class="steps step-2 button red">Далее</a>
+            <a href="#step-2" class="steps step-2 button red" onclick="ga('send', 'event', 'button', 'step1');">Далее</a>
           </div>
         </div>
 
@@ -399,7 +395,7 @@
           </ul>
           <div class="cfx"></div>
           <div class="control">
-            <a href="#step-3" class="steps step-3 button red">Далее</a>
+            <a href="#step-3" class="steps step-3 button red" onclick="ga('send', 'event', 'button', 'step2');">Далее</a>
           </div>
         </div>
 
@@ -430,8 +426,12 @@
           </ul>
           <div class="summa"><strong>Сумма:</strong> 200 грн</div>
           <div class="delivery-memo">Доставка оплачивается отдельно от суммы заказа</div>
+          <div class="rules">
+            <input id="rules" type="checkbox" name="rules" value="y">
+            <label for="rules" class="checkbox">с правилами предоставления услуг ознакомлен</label>
+          </div>           
           <div class="control">
-            <a href="#submit" class="steps submit button red">Подтвердить</a>
+            <a href="#submit" class="steps submit button red" onclick="ga('send', 'event', 'button', 'send');">Подтвердить</a>
           </div>
         </div>
       </div> 
