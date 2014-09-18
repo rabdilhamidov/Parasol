@@ -756,8 +756,8 @@ section#contacts {
       font-size: 14px;
       font-family: 'avantgardegothiccregular'; }
     .popup-order-form .form-content .rules input {
-      width: 0;
-      height: 0;
+      width: 15px;
+      height: 15px;
       vertical-align: -2px;
       margin-right: 5px; }
   .popup-order-form .control {
